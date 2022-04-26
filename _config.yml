@@ -1,3 +1,7 @@
 theme: jekyll-theme-cayman
 title: Tree density vs crimes in San Francisco
 description: This is the description of the page
+defaults:
+  -
+    values:
+      author: "Nóra Muraközy (s202222), Ferenc Leicht (s20XXXX), Páll Guðbrandsson (sXXXXXX)"
