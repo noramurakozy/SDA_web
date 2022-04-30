@@ -1,37 +1,62 @@
 ## Does tree density influence the number of crimes in San Francisco?
+`PLOTS HOWTO:
+  - short introduction why to we show this plot
+  - title, axes, colors, labels, ticks, caption
+  - observations written under the plot`
 
-You can use the [editor on GitHub](https://github.com/noramurakozy/SDA_web/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Introduction
+TODO
+- introduce the structure of the webpage
+- provide link to the notebook
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+#### Motivation
+TODO
+- why this topic is interesting
+- how trees influence our lives
+- what do we want to investigate
+- what questions do we want to answer
 
-### Markdown
+#### Datasets
+TODO
+- why did we choose SF data
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+##### Tree dataset
+TODO
+- link to the data
 
-```markdown
-Syntax highlighted code block
+##### Crime dataset
+TODO
+- link to the data
+- short introduction
+###### Overview of data
+TODO
+- basic infos about the data
+  - number of rows, columns
+  - size
+  - date range
+###### Fundamental aspects of the data
+- number of trees in the dataset
+- various types of trees, how many are there
+- number of trees in each category
+- most commonly occuring type of tree
+- least commonly occuring type of tree
+- plot: bar plot over tree type occurences
+- number of trees planted per year
+- year with the least planted trees
+- year with the most planted trees
+- average number of planted trees per year
+- plot: bar plot over average number of planted trees per year by type and adding its standard deviation
+- define 'focus trees'?
+- plot: bar charts displaying the year-by-year development of each tree types in the range X-Y
+- comment on 3 interesting trends in the plot
+- which area has the most trees (based on zip code)
+- plot: plot zip code areas and color based on the number of trees? (we have done it for vehicle thefts on Sundays in PDDistricts)
+- 
 
-# Header 1
-## Header 2
-### Header 3
+### Analysis
+TODO
+- link to the notebook
 
-- Bulleted
-- List
+### Conclusion
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/noramurakozy/SDA_web/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### References
