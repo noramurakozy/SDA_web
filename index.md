@@ -1,4 +1,4 @@
-## Does tree density influences the number of crimes in San Francisco?
+## Does tree density influence the number of crimes in San Francisco?
 
 You can use the [editor on GitHub](https://github.com/noramurakozy/SDA_web/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
