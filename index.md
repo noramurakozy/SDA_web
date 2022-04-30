@@ -96,7 +96,7 @@ Crimes per area
 - discuss stereotypes of certain neighbourhoods and compare with results
 - plot: plot PDDistricts and color based on the number of crimes? (we have done it for vehicle thefts on Sundays in PDDistricts)
 
-## Correlation between tree density and crime occurences
+## Analysing the correlation between tree density and crime occurences
 - what are we expecting
 - what questions do we want to answer
   - connection between number of trees and number of crimes in general? (in 100mx100x areas on heatmap)
@@ -114,11 +114,16 @@ Crimes per area
     - animation of planting trees over the year + crimes in the same animation with different color?
     - make observations
     - support observations with calculations and data
-  - 
-  
+  - prediction of number of crimes in area if X number of trees are planted
+    - machine learning model
+    - linear regression
+    - checking the trees after the last planting date, so we consider "all" trees that can influence the number of crimes
+    - do linear regression for tree types vs crime types as well
+    - check correlation between tree types and crimes types
 
 ## Conclusion
 - write conclusion of findings
 - what could have we done better
+- mention any areas with missing data (e.g. the park where no trees are listed in the dataset)
 
 ## References
