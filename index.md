@@ -23,10 +23,6 @@ TODO
 ##### Tree dataset
 TODO
 - link to the data
-
-##### Crime dataset
-TODO
-- link to the data
 - short introduction
 ###### Overview of data
 TODO
@@ -51,7 +47,36 @@ TODO
 - comment on 3 interesting trends in the plot
 - which area has the most trees (based on zip code)
 - plot: plot zip code areas and color based on the number of trees? (we have done it for vehicle thefts on Sundays in PDDistricts)
-- 
+
+##### Tree dataset
+TODO
+- link to the data
+- short introduction
+
+###### Overview of data
+TODO
+- basic infos about the data
+  - number of rows, columns
+  - size
+  - date range
+
+###### Fundamental aspects of the data
+- number of crimes in the dataset
+- various types of crimes, how many are there
+- number of crimes in each category
+- most commonly occuring type of crime
+- least commonly occuring type of crime
+- plot: bar plot over crime type occurences
+- number of crimes per year
+- year with the least number of crimes
+- year with the most number of crimes
+- average number of crimes per year
+- plot: bar plot over average number of crimes per year by type and adding its standard deviation
+- define 'focus crimes'
+- plot: bar charts displaying the year-by-year development of each crime types in the range X-Y
+- comment on 3 interesting trends in the plot
+- which area has the most crimes (based on PDDistrict)
+- plot: plot PDDistricts and color based on the number of crimes? (we have done it for vehicle thefts on Sundays in PDDistricts)
 
 ### Analysis
 TODO
