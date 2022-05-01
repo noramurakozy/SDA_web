@@ -1,15 +1,4 @@
-# Does tree density influence the number of crimes in San Francisco?
-PLOTS HOWTO:
-  - short introduction why to we show this plot
-  - title, axes, colors, labels, ticks, caption
-  - observations written under the plot
-
-<iframe src="https://noramurakozy.github.io/SDA_web/maps/map_trees.html" width="100%" height="500px"></iframe>
-
 ## Introduction
-TODO
-- introduce the structure of the page
-- provide link to the notebook
 
 ### Motivation
 TODO
@@ -17,6 +6,17 @@ TODO
 - how trees influence our lives
 - what do we want to investigate
 - what questions do we want to answer
+
+TODO
+- introduce the structure of the page
+- provide link to the notebook
+
+PLOTS HOWTO:
+  - short introduction why do we show this plot
+  - title, axes, colors, labels, ticks, caption
+  - observations written under the plot
+
+<iframe src="https://noramurakozy.github.io/SDA_web/maps/map_trees.html" width="100%" height="500px"></iframe>
 
 ### Datasets
 TODO
