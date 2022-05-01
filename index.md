@@ -47,8 +47,9 @@ In the following table we introduce the columns we use for analysis.
 | ```Police Districts``` | Indentifier number of police district where the tree is located | Number |
 | ```Zip Codes``` | Zip code of the area where the tree is located | Number |
 
-Around 16000 trees do not have location or valid species type, those were removed from the dataset during preprocessing and will not be used during the analysis.
-The following interactive map shows the location of the registered trees in San Francisco.
+*Note:* Around 16000 trees do not have location data or valid species type, those were removed from the dataset during preprocessing and will not be used during the analysis. There are 180611 unique trees in the reduced dataset.
+
+The following interactive map shows the location of the registered trees from the reduced dataset in San Francisco.
 
 <iframe src="./maps/map_trees_all.html" width="100%" height="500px"></iframe>
 
@@ -57,7 +58,7 @@ The following interactive map shows the location of the registered trees in San 
 As the map shows, most of the trees are located on the east side of San Francisco, the density is a bit lower on the west side and data is missing in the public parks, probably because they are maintained and registered by an organization other than [The City Department of Public Works (DPW)](https://sfpublicworks.org/).
 
 ##### Fundamental aspects of the data
-This section gives a deeper insight to the dataset by analysing the trees by species, years and areas. From this point, the results are reflecting the statistics of the reduced dataset, containing only trees with registered location and valid species type. There are 180611 unique trees in the reduced dataset.
+This section gives a deeper insight to the dataset by analysing the trees by species, years and areas.
 
 **Species**
 
@@ -75,6 +76,60 @@ The data contains 571 species across 180611 trees, from which the 10 most common
 | Arbutus 'Marina' - Hybrid Strawberry Tree | 5660 |
 | Ficus microcarpa nitida 'Green Gem' - Indian Laurel Fig Tree 'Green Gem' | 5574 |
 | Prunus serrulata 'Kwanzan' - Kwanzan Flowering Cherry | 4004 |
+
+<table>
+	<tbody>
+		<tr>
+			<td>Species name</td>
+			<td>Number of trees</td>
+			<td rowspan="11">
+        <figure>
+          <img src="./images/trees_per_species_bar.png" alt="fig1" style="width:100%">
+        </figure>
+      </td>
+		</tr>
+		<tr>
+			<td>Platanus x hispanica - Sycamore: London Plane</td>
+			<td>11680</td>
+		</tr>
+		<tr>
+			<td>Metrosideros excelsa - New Zealand Xmas Tree</td>
+			<td>8757</td>
+		</tr>
+		<tr>
+			<td>Lophostemon confertus - Brisbane Box</td>
+			<td>8735</td>
+		</tr>
+		<tr>
+			<td>Tristaniopsis laurina - Swamp Myrtle</td>
+			<td>7400</td>
+		</tr>
+		<tr>
+			<td>Pittosporum undulatum -  Victorian Box</td>
+			<td>7191</td>
+		</tr>
+		<tr>
+			<td>Prunus cerasifera - Cherry Plum</td>
+			<td>6700</td>
+		</tr>
+		<tr>
+			<td>Magnolia grandiflora - Southern Magnolia</td>
+			<td>6360</td>
+		</tr>
+		<tr>
+			<td>Arbutus 'Marina' - Hybrid Strawberry Tree</td>
+			<td>5660</td>
+		</tr>
+		<tr>
+			<td>Ficus microcarpa nitida 'Green Gem' - Indian Laurel Fig Tree 'Green Gem'</td>
+			<td>5574</td>
+		</tr>
+		<tr>
+			<td>Prunus serrulata 'Kwanzan' - Kwanzan Flowering Cherry</td>
+			<td>4004</td>
+		</tr>
+	</tbody>
+</table>
 
 - plot: map of trees per type
 - most commonly occuring type of tree
