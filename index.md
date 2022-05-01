@@ -40,14 +40,14 @@ In the following table we introduce the columns we use for analysis.
 | --- | --- | --- |
 | ```TreeID``` | Unique ID of tree | Number |
 | ```qSpecies``` | Species of tree | Text |
-| ```PlantDate``` | Date tree was planted | Date & Time |
+| ```PlantDate``` | Date tree was planted | DateTime |
 | ```Latitude``` | Y coordinate of tree | Number |
 | ```Longitude``` | X coordinate of tree | Number |
 | ```Latitude``` | Y coordinate of tree | Number |
 | ```Police Districts``` | Indentifier number of police district where the tree is located | Number |
 | ```Zip Codes``` | Zip code of the area where the tree is located | Number |
 
-Around 3000 trees do not have location data, those were removed from the dataset during preprocessing and will not be used during the analysis.
+Around 16000 trees do not have location or valid species type, those were removed from the dataset during preprocessing and will not be used during the analysis.
 The following interactive map shows the location of the registered trees in San Francisco.
 
 <iframe src="./maps/map_trees_all.html" width="100%" height="500px"></iframe>
@@ -57,11 +57,26 @@ The following interactive map shows the location of the registered trees in San 
 As the map shows, most of the trees are located on the east side of San Francisco, the density is a bit lower on the west side and data is missing in the public parks, probably because they are maintained and registered by an organization other than [The City Department of Public Works (DPW)](https://sfpublicworks.org/).
 
 ##### Fundamental aspects of the data
-Categories
-- number of trees in the dataset
-- various types of trees, how many are there
+This section gives a deeper insight to the dataset by analysing the trees by species, years and areas. From this point, the results are reflecting the statistics of the reduced dataset, containing only trees with registered location and valid species type. There are 180611 unique trees in the reduced dataset.
+
+**Species**
+
+The data contains 571 species across 180611 trees, from which the 10 most common types are the following:
+
+| Species name | Number of trees |
+| --- | --- |
+| Platanus x hispanica - Sycamore: London Plane | 11680 |
+| Metrosideros excelsa - New Zealand Xmas Tree | 8757 |
+| Lophostemon confertus - Brisbane Box | 8735 |
+| Tristaniopsis laurina - Swamp Myrtle | 7400 |
+| Pittosporum undulatum -  Victorian Box | 7191 |
+| Prunus cerasifera - Cherry Plum | 6700 |
+| Magnolia grandiflora - Southern Magnolia | 6360 |
+| Arbutus 'Marina' - Hybrid Strawberry Tree | 5660 |
+| Ficus microcarpa nitida 'Green Gem' - Indian Laurel Fig Tree 'Green Gem' | 5574 |
+| Prunus serrulata 'Kwanzan' - Kwanzan Flowering Cherry | 4004 |
+
 - plot: map of trees per type
-- number of trees in each category
 - most commonly occuring type of tree
 - least commonly occuring type of tree
 - plot: bar plot over tree type occurences
