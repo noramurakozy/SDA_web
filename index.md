@@ -1,8 +1,8 @@
 # Does tree density influence the number of crimes in San Francisco?
-`PLOTS HOWTO:
+PLOTS HOWTO:
   - short introduction why to we show this plot
   - title, axes, colors, labels, ticks, caption
-  - observations written under the plot`
+  - observations written under the plot
 
 ## Introduction
 TODO
