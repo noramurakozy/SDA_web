@@ -4,6 +4,8 @@ PLOTS HOWTO:
   - title, axes, colors, labels, ticks, caption
   - observations written under the plot
 
+<iframe src="https://noramurakozy.github.io/SDA_web/maps/map_trees.html" width="100%" height="500px"></iframe>
+
 ## Introduction
 TODO
 - introduce the structure of the page
