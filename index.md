@@ -70,6 +70,7 @@ TODO
   - number of rows, columns
   - size
   - date range
+  - mention why we skip data in 2018
   - map of crimes?
 
 ##### Fundamental aspects of the data
