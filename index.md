@@ -64,24 +64,11 @@ This section gives a deeper insight to the dataset by analysing the trees by spe
 
 The data contains 571 species across 180611 trees, from which the 10 most common types are the following:
 
-| Species name | Number of trees |
-| --- | --- |
-| Platanus x hispanica - Sycamore: London Plane | 11680 |
-| Metrosideros excelsa - New Zealand Xmas Tree | 8757 |
-| Lophostemon confertus - Brisbane Box | 8735 |
-| Tristaniopsis laurina - Swamp Myrtle | 7400 |
-| Pittosporum undulatum -  Victorian Box | 7191 |
-| Prunus cerasifera - Cherry Plum | 6700 |
-| Magnolia grandiflora - Southern Magnolia | 6360 |
-| Arbutus 'Marina' - Hybrid Strawberry Tree | 5660 |
-| Ficus microcarpa nitida 'Green Gem' - Indian Laurel Fig Tree 'Green Gem' | 5574 |
-| Prunus serrulata 'Kwanzan' - Kwanzan Flowering Cherry | 4004 |
-
 <table>
 	<tbody>
 		<tr>
-			<td>Species name</td>
-			<td>Number of trees</td>
+			<td><b>Species name</b></td>
+			<td><b>Number of trees</b></td>
 			<td rowspan="11">
         <figure>
           <img src="./images/trees_per_species_bar.png" alt="fig1" style="width:100%">
