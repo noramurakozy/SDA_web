@@ -16,24 +16,46 @@ PLOTS HOWTO:
   - title, axes, colors, labels, ticks, caption
   - observations written under the plot
 
-<iframe src="https://noramurakozy.github.io/SDA_web/maps/map_trees.html" width="100%" height="500px"></iframe>
-
 ### Datasets
 TODO
 - why did we choose SF data
 - link to the notebook
 
 #### Tree dataset
-TODO
-- link to the data
-- short introduction
+**Description:** The dataset is the list of maintained street trees in San Francisco including their planting date, species, and location. Please note, that the dataset is updated quite frequently, but since we access the data through the API of the OpenSF organization, our analysis remains up-to-date and shows the visualisations with the latest data. The data is openly accessible [here](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq).
+
 ##### Overview of data
-TODO
-- basic infos about the data
-  - number of rows, columns
-  - size
-  - date range
-  - plot: map of trees
+This section gives an overview of the data by listing the basic information of the dataset.
+
+| Property | Value |
+| --- | --- |
+| Size in MB | 49.2 |
+| Nr. of rows | 196160 |
+| Nr. of columns | 23 |
+| Date range (the date when the tree was planted) | 19/09/1955 - 28/04/2022 |
+
+In the following table we introduce the columns we use for analysis.
+
+| Column name | Description | Type |
+| --- | --- | --- |
+| TreeID | Unique ID of tree | Number |
+| qSpecies | Species of tree | Text |
+| PlantDate | Date tree was planted | Date & Time |
+| Latitude | Y coordinate of tree | Number |
+| Longitude | X coordinate of tree | Number |
+| Latitude | Y coordinate of tree | Number |
+| Police Districts | Indentifier number of police district where the tree is located | Number |
+| Zip Codes | Zip code of the area where the tree is located | Number |
+
+Around 3000 trees do not have location data, those were removed from the dataset during preprocessing and will not be used during the analysis.
+The following interactive map shows the location of the registered trees in San Francisco.
+
+<iframe src="./maps/map_trees_all.html" width="100%" height="500px"></iframe>
+
+> Figure 1: Interactive map of all trees with registered location data in San Francisco
+
+As the map shows, most of the trees are located on the east side of San Francisco, the density is a bit lower on the west side and data is missing in the public parks, probably because they are maintained and registered by an organization other than The City Department of Public Works (DPW).
+
 ##### Fundamental aspects of the data
 Categories
 - number of trees in the dataset
