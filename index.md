@@ -61,13 +61,29 @@ As the map shows, most of the trees are located on the east side of San Francisc
 ##### Fundamental aspects of the data
 This section gives a deeper insight to the dataset by analysing the trees by species, years and areas.
 
-<figure>
-  <img src="./images/trees_per_species_bar.png" alt="fig1" style="width:100%">
-</figure>
-
 **Species**
 
-TODO: fix image ticks that are hidden
+The **most common** tree species in San Francisco is *Platanus x hispanica :: Sycamore: London Plane* with *11680* occurences.
+
+The **least common** tree species in San Francisco are e.g.:
+- *Yucca aloifolia :: Spanish bayonet*
+- *Alnus rubra :: Red Alder*
+- *Brahea brandegeei :: San Jose hesper palm*
+- *Araucaria bidwillii :: Bunya Bunya*
+- *Acer campestre :: Hedge Maple*
+
+with only 1 occurence.
+
+<div class="imageContainer">
+	<figure>
+	  <img src="./images/most_common_tree.png" alt="fig3" class="mostCommonImg">
+	</figure>
+	<figure>
+	  <img src="./images/least_common_tree.png" alt="fig4">
+	</figure>
+</div>
+
+TODO: fix image ticks that are hidden on bar chart (and add bar chart)
 The data contains 571 species across 180611 trees, from which the **10 most common types** are the following:
 
 <table>
@@ -129,25 +145,6 @@ The data contains 571 species across 180611 trees, from which the **10 most comm
 		</tr>
 	</tbody>
 </table>
-
-The **most common** tree species in San Francisco is *Platanus x hispanica :: Sycamore: London Plane* with *11680* occurences.
-The **least common** tree species in San Francisco are e.g.:
-- *Yucca aloifolia :: Spanish bayonet*
-- *Alnus rubra :: Red Alder*
-- *Brahea brandegeei :: San Jose hesper palm*
-- *Araucaria bidwillii :: Bunya Bunya*
-- *Acer campestre :: Hedge Maple*
-
-with only 1 occurence.
-
-<div class="imageContainer">
-	<figure>
-	  <img src="./images/most_common_tree.png" alt="fig3" class="mostCommonImg">
-	</figure>
-	<figure>
-	  <img src="./images/least_common_tree.png" alt="fig4">
-	</figure>
-</div>
 
 Trees over the years
 - plot: animation of planted trees over the years
