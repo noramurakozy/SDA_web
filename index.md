@@ -61,7 +61,7 @@ As the map shows, most of the trees are located on the east side of San Francisc
 ##### Fundamental aspects of the data
 This section gives a deeper insight to the dataset by analysing the trees by species, years and areas.
 
- <figure>
+<figure>
   <img src="./images/trees_per_species_bar.png" alt="fig1" style="width:100%">
 </figure>
 
@@ -130,9 +130,24 @@ The data contains 571 species across 180611 trees, from which the **10 most comm
 	</tbody>
 </table>
 
-- plot: map of trees per type
-- most commonly occuring type of tree
-- least commonly occuring type of tree
+The **most common** tree species in San Francisco is *Platanus x hispanica :: Sycamore: London Plane* with *11680* occurences.
+The **least common** tree species in San Francisco are e.g.:
+- *Yucca aloifolia :: Spanish bayonet*
+- *Alnus rubra :: Red Alder*
+- *Brahea brandegeei :: San Jose hesper palm*
+- *Araucaria bidwillii :: Bunya Bunya*
+- *Acer campestre :: Hedge Maple*
+
+with only 1 occurence.
+
+<span>
+<figure>
+  <img src="./images/most_common_tree.png" alt="fig3" style="width:50%">
+</figure>
+<figure>
+  <img src="./images/least_common_tree.png" alt="fig4" style="width:50%">
+</figure>
+</span>
 
 Trees over the years
 - plot: animation of planted trees over the years
