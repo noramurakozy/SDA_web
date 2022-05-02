@@ -1,3 +1,19 @@
+This webpage was created as an assignment for the [Social Data Analysis and Visualisation](https://kurser.dtu.dk/course/02806) course at DTU in 2022. The site presents our findings on the connection between tree density and crime occurences in San Francisco. Please find the repository of this GitHub page **[here](https://github.com/noramurakozy/SDA_web/tree/gh-pages)**.
+
+## Table of contents
+- [Introduction](#introduction)
+  * [Motivation](#motivation)
+  * [Datasets](#datasets)
+    + [Tree dataset](#tree-dataset)
+      - [Overview of data](#overview-of-data)
+      - [Fundamental aspects of the data](#fundamental-aspects-of-the-data)
+    + [Crime dataset](#crime-dataset)
+      - [Overview of data](#overview-of-data-1)
+      - [Fundamental aspects of the data](#fundamental-aspects-of-the-data-1)
+- [Analysing the correlation between tree density and crime occurences](#analysing-the-correlation-between-tree-density-and-crime-occurences)
+- [Conclusion](#conclusion)
+- [References](#references)
+
 ## Introduction
 
 ### Motivation
@@ -33,7 +49,7 @@ This section gives an overview of the data by showing the basic statistics of th
 
 > Figure 1: Statistics of Street Trees data in San Francisco
 
-The overall data consists of 196160 rows and 23 rows with 49.2 MB file size. Trees are listed with planting dates between 1955 and 2022.
+The overall data consists of **196160 rows** and **23 columns** with **49.2 MB** file size. Trees are listed with planting dates **between 1955 and 2022**.
 
 In the following table we introduce the columns we use for analysis.
 
@@ -84,6 +100,7 @@ with only 1 occurence.
 </div>
 
 TODO: fix image ticks that are hidden on bar chart (and add bar chart)
+
 The data contains 571 species across 180611 trees, from which the **10 most common types** are the following:
 
 <table>
