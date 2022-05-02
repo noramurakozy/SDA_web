@@ -140,14 +140,14 @@ The **least common** tree species in San Francisco are e.g.:
 
 with only 1 occurence.
 
-<span>
-<figure>
-  <img src="./images/most_common_tree.png" alt="fig3" style="width:50%">
-</figure>
-<figure>
-  <img src="./images/least_common_tree.png" alt="fig4" style="width:50%">
-</figure>
-</span>
+<div class="imageContainer">
+	<figure>
+	  <img src="./images/most_common_tree.png" alt="fig3" class="mostCommonImg">
+	</figure>
+	<figure>
+	  <img src="./images/least_common_tree.png" alt="fig4">
+	</figure>
+</div>
 
 Trees over the years
 - plot: animation of planted trees over the years
