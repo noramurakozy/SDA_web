@@ -61,6 +61,10 @@ As the map shows, most of the trees are located on the east side of San Francisc
 ##### Fundamental aspects of the data
 This section gives a deeper insight to the dataset by analysing the trees by species, years and areas.
 
+ <figure>
+  <img src="./images/trees_per_species_bar.png" alt="fig1" style="width:100%">
+</figure>
+
 **Species**
 
 TODO: fix image ticks that are hidden
@@ -71,51 +75,57 @@ The data contains 571 species across 180611 trees, from which the **10 most comm
 		<tr>
 			<td><b>Species name</b></td>
 			<td><b>Number of trees</b></td>
-			<td rowspan="11">
-        <figure>
-          <img src="./images/trees_per_species_bar.png" alt="fig1" style="width:100%">
-        </figure>
-      </td>
+			<td><b>Map</b></td>
 		</tr>
 		<tr>
 			<td>Platanus x hispanica - Sycamore: London Plane</td>
 			<td>11680</td>
+			<td><iframe src="./maps/map_species_1.html" width="450px" height="400px"></iframe></td>
 		</tr>
 		<tr>
 			<td>Metrosideros excelsa - New Zealand Xmas Tree</td>
 			<td>8757</td>
+			<td><iframe src="./maps/map_species_2.html" width="450px" height="400px"></iframe></td>
 		</tr>
 		<tr>
 			<td>Lophostemon confertus - Brisbane Box</td>
 			<td>8735</td>
+			<td><iframe src="./maps/map_species_3.html" width="450px" height="400px"></iframe></td>
 		</tr>
 		<tr>
 			<td>Tristaniopsis laurina - Swamp Myrtle</td>
 			<td>7400</td>
+			<td><iframe src="./maps/map_species_4.html" width="450px" height="400px"></iframe></td>
 		</tr>
 		<tr>
 			<td>Pittosporum undulatum -  Victorian Box</td>
 			<td>7191</td>
+			<td><iframe src="./maps/map_species_5.html" width="450px" height="400px"></iframe></td>
 		</tr>
 		<tr>
 			<td>Prunus cerasifera - Cherry Plum</td>
 			<td>6700</td>
+			<td><iframe src="./maps/map_species_6.html" width="450px" height="400px"></iframe></td>
 		</tr>
 		<tr>
 			<td>Magnolia grandiflora - Southern Magnolia</td>
 			<td>6360</td>
+			<td><iframe src="./maps/map_species_7.html" width="450px" height="400px"></iframe></td>
 		</tr>
 		<tr>
 			<td>Arbutus 'Marina' - Hybrid Strawberry Tree</td>
 			<td>5660</td>
+			<td><iframe src="./maps/map_species_8.html" width="450px" height="400px"></iframe></td>
 		</tr>
 		<tr>
 			<td>Ficus microcarpa nitida 'Green Gem' - Indian Laurel Fig Tree 'Green Gem'</td>
 			<td>5574</td>
+			<td><iframe src="./maps/map_species_9.html" width="450px" height="400px"></iframe></td>
 		</tr>
 		<tr>
 			<td>Prunus serrulata 'Kwanzan' - Kwanzan Flowering Cherry</td>
 			<td>4004</td>
+			<td><iframe src="./maps/map_species_10.html" width="450px" height="400px"></iframe></td>
 		</tr>
 	</tbody>
 </table>
