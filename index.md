@@ -27,12 +27,13 @@ The dataset is the list of maintained street trees in San Francisco including th
 ##### Overview of data
 This section gives an overview of the data by listing the basic information of the dataset.
 
-| Property | Value |
-| --- | --- |
-| Size in MB | 49.2 |
-| Nr. of rows | 196160 |
-| Nr. of columns | 23 |
-| Date range (the date when the tree was planted) | 19/09/1955 - 28/04/2022 |
+<figure>
+  <img src="./images/sf_street_trees_info.png" alt="fig1" style="width:100%">
+</figure>
+
+> Figure 1: Statistics of Street Trees data in San Francisco
+
+The overall data consists of 196160 rows and 23 rows with 49.2 MB file size. Trees are listed with planting dates between 1955 and 2022.
 
 In the following table we introduce the columns we use for analysis.
 
@@ -47,13 +48,13 @@ In the following table we introduce the columns we use for analysis.
 | ```Police Districts``` | Indentifier number of police district where the tree is located | Number |
 | ```Zip Codes``` | Zip code of the area where the tree is located | Number |
 
-*Note:* Around 16000 trees do not have location data or valid species type, those were removed from the dataset during preprocessing and will not be used during the analysis. There are 180611 unique trees in the reduced dataset.
+*Note: Around 16000 trees do not have location data or valid species type, those were removed from the dataset during preprocessing and will not be used during the analysis. **There are 180611 unique trees in the reduced dataset.***
 
 The following interactive map shows the location of the registered trees from the reduced dataset in San Francisco.
 
 <iframe src="./maps/map_trees_all.html" width="100%" height="500px"></iframe>
 
-> Figure 1: Interactive map of all trees with registered location in San Francisco
+> Figure 2: Interactive map of all trees with registered location in San Francisco
 
 As the map shows, most of the trees are located on the east side of San Francisco, the density is a bit lower on the west side and data is missing in the public parks, probably because they are maintained and registered by an organization other than [The City Department of Public Works (DPW)](https://sfpublicworks.org/).
 
@@ -62,7 +63,8 @@ This section gives a deeper insight to the dataset by analysing the trees by spe
 
 **Species**
 
-The data contains 571 species across 180611 trees, from which the 10 most common types are the following:
+TODO: fix image ticks that are hidden
+The data contains 571 species across 180611 trees, from which the **10 most common types** are the following:
 
 <table>
 	<tbody>
@@ -121,7 +123,6 @@ The data contains 571 species across 180611 trees, from which the 10 most common
 - plot: map of trees per type
 - most commonly occuring type of tree
 - least commonly occuring type of tree
-- plot: bar plot over tree type occurences
 
 Trees over the years
 - plot: animation of planted trees over the years
