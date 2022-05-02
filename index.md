@@ -25,10 +25,10 @@ TODO
 The dataset is the list of maintained street trees in San Francisco including their planting date, species, and location. Please note, that the dataset is updated quite frequently, but since we access the data through the API of the OpenSF organization, our analysis remains up-to-date and shows the visualisations with the latest data. The data is openly accessible **[here](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)**.
 
 ##### Overview of data
-This section gives an overview of the data by listing the basic information of the dataset.
+This section gives an overview of the data by showing the basic statistics of the dataset.
 
 <figure>
-  <img src="./images/sf_street_trees_info.png" alt="fig1" style="width:100%">
+  <img src="./images/sf_street_trees_info.png" alt="fig1" class="image">
 </figure>
 
 > Figure 1: Statistics of Street Trees data in San Francisco
