@@ -205,7 +205,7 @@ By calculating the standard daviation of the number of trees over the years, we 
 Another interesting change to investigate is the year-by-year development of the tree species. On Figure 6 we can see how many trees were planted for each species per year. The green color indicates high amount of planted trees in the year, read indicates low amount and the yellow color transitions for the amounts in between. 
 
 <figure>
-  <img src="./images/species_yearly_dev_bar.png" alt="fig6" class="centeredImage" style="width:80%">
+  <img src="./images/species_yearly_dev_bar.png" alt="fig6" class="centeredImage" style="width:100%">
 </figure>
 
 > Figure 6: Yearly amount of planted trees per focus tree species
