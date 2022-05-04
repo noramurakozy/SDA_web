@@ -64,6 +64,7 @@ In the following table we introduce the columns we use for analysis.
 | ```Latitude``` | Y coordinate of tree | Number |
 | ```Police Districts``` | Indentifier number of police district where the tree is located | Number |
 | ```Zip Codes``` | Zip code of the area where the tree is located | Number |
+
 > Table 1: Columns used for analysis and their short description
 
 *Note: Around 16000 trees do not have location data or valid species type, those were removed from the dataset during preprocessing and will not be used during the analysis. **There are 180611 unique trees in the reduced dataset.***
@@ -181,6 +182,7 @@ The following table and maps show the location of these species across San Franc
 		</tr>
 	</tbody>
 </table>
+
 > Table 2: The occurences of the most common tree species in San Francisco and their location on interactive maps
 
 **Trees over the years**
@@ -345,6 +347,6 @@ Crimes per area
 ## Conclusion
 - write conclusion of findings
 - what could have we done better
-- mention any areas with missing data (e.g. the park where no trees are listed in the dataset)
+- mention any areas with missing data (e.g. the park where no trees are listed in the dataset (because those are not street trees?))
 
 ## References
