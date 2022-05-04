@@ -182,7 +182,19 @@ In 2008 4278 trees were planted, which is the hightest amount in the registered 
 
 > Figure 4: The number of trees planted in each year between 1955 and 2022 in San Francisco
 
-By calculating the standard daviation of the number of trees over the years, we can observe the extent of the difference of number the planted trees compared to the average. As standard deviation is the quantity expressing how much the members of a group differ from the mean value for the group, we can conclude here, that for the trees in the *Arbutus Marina* species, the planted trees per year strongly differ from the mean of the yearly count. We can notice the same pattern in all the selected species, although in the case of *Ficus microcarpa nitida* it's not that significant. The following figure illustrates the average number of planted trees per year by species and their standard deviations as error bars. Due to the large selection of tree species (571 unique species in total), we decided to work with the most common species which were introduced earlier in Table 2.
+By calculating the standard daviation of the number of trees over the years, we can observe the extent of the difference of number the planted trees compared to the average. As standard deviation is the quantity expressing how much the members of a group differ from the mean value for the group, we can conclude here, that for the trees in the *Arbutus Marina* species, the planted trees per year strongly differ from the mean of the yearly count. We can notice the same pattern in all the selected species, although in the case of *Ficus microcarpa nitida* it's not that significant. Figure 5 illustrates the average number of planted trees per year by species and their standard deviations as error bars. Due to the large selection of tree species (571 unique species in total), we decided to work with the most common species which were introduced earlier in Table 2, but listed here as well:
+
+*Focus species:*
+- Prunus serrulata 'Kwanzan' :: Kwanzan Flowering Cherry
+- Ficus microcarpa nitida 'Green Gem' :: Indian Laurel Fig Tree 'Green Gem'
+- Arbutus 'Marina' :: Hybrid Strawberry Tree
+- Magnolia grandiflora :: Southern Magnolia
+- Prunus cerasifera :: Cherry Plum
+- Pittosporum undulatum :: Victorian Box
+- Tristaniopsis laurina :: Swamp Myrtle
+- Lophostemon confertus :: Brisbane Box
+- Metrosideros excelsa :: New Zealand Xmas Tree
+- Platanus x hispanica :: Sycamore: London Plane
 
 <figure>
   <img src="./images/trees_avg_per_year_std_bar.png" alt="fig5" class="centeredImage" style="width:80%">
@@ -190,10 +202,22 @@ By calculating the standard daviation of the number of trees over the years, we 
 
 > Figure 5: The average number of trees planted per year by species and their standard deviation
 
-- plot: bar charts displaying the year-by-year development of each tree types in the range X-Y
+Another interesting change to investigate is the year-by-year development of the tree species. On Figure 6 we can see how many trees were planted for each species per year. The green color indicates high amount of planted trees in the year, read indicates low amount and the yellow color transitions for the amounts in between. 
+
+<figure>
+  <img src="./images/species_yearly_dev_bar.png" alt="fig6" class="centeredImage" style="width:80%">
+</figure>
+
+> Figure 6: Yearly amount of planted trees per focus tree species
+
+These are the most interesting observations we can read from these plots:
+- *Ficus microcarpa nitida 'Green Gem' :: Indian Laurel Fig Tree 'Green Gem'*: Despite the low amount of trees planted from this species in general (maximum is less than 40 in a year), the number of trees per year was quite consistent and in most of the years, the amount was close to the max number of planted trees from this species. Seeing the consistency across the years also supported by the standard deviation of this species, shown in Figure 5, as this was the type which had the lowest standard deviation, meaningly the fluctuation of the number of planted trees throughout the years is low.
+- *Arbutus 'Marina' :: Hybrid Strawberry Tree*: As opposed to the previously introduced species (Ficus), this plot has a well distinguishable peak in 2008, where extreme amount of trees were planted, nearly 500. In other years, the amount remained close to 100. This can be read (or at least suspected) by looking at Figure 5, because this species has the largest standard deviation, meaningly the tree counts are mostly far from the mean, which is understandable, since the mean is highly influenced by this peak.
+- *Prunus cerasifera :: Cherry Plum*: Interestingly, this plot has a bell shape, which means that in the early years they did not plant that many trees of this species, but they focused on planting trees between 1995 and 2005, gradually increasing, then decreasing the number of planted trees. After 2005, the amount decreased gradually and less than 50 trees were planted a year.
+
+- add anomalies here
+- comment on anomalies
 - plot: animation of planted trees over the years
-- comment on 3 interesting trends in the plot
-- define 'focus trees'?
 
 Trees per area
 - which area has the most trees (based on zip code)
