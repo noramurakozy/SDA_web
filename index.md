@@ -99,8 +99,6 @@ with only 1 occurence.
 	</figure>
 </div>
 
-TODO: add tree images next to maps of species?
-
 The data contains 571 species across 180611 trees, from which the **10 most common types** are the following:
 
 <figure>
@@ -111,6 +109,7 @@ The data contains 571 species across 180611 trees, from which the **10 most comm
 
 The following table and maps show the location of these species across San Francisco.
 
+TODO: add tree images next to maps of species?
 <table>
 	<tbody>
 		<tr>
@@ -172,10 +171,15 @@ The following table and maps show the location of these species across San Franc
 </table>
 
 **Trees over the years**
-- number of trees planted per year (avg, min, max)
-- year with the least planted trees
-- year with the most planted trees
-- average number of planted trees per year
+
+In 2008 4278 trees were planted, which is the hightest amount in the registered time period, although in 1955 only 6 trees were planted, which is the lowest amount in the registered time period. On average, 1077 trees were planted per year, 99 per month and 8 per day.
+
+<figure>
+  <img src="./images/trees_per_year_bar.png" alt="fig4" class="centeredImage" style={{width: 80%}}>
+</figure>
+
+> Figure 4: The number of trees planted in each year between 1955 and 2022 in San Francisco
+
 - plot: bar plot over average number of planted trees per year by type and adding its standard deviation
 - plot: bar charts displaying the year-by-year development of each tree types in the range X-Y
 - plot: animation of planted trees over the years
