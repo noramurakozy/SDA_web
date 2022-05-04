@@ -103,70 +103,80 @@ with only 1 occurence.
 The data contains 571 species across 180611 trees, from which the **10 most common types** are the following:
 
 <figure>
-  <img src="./images/trees_per_species_bar.png" alt="fig3" class="centeredImage" style={{width: 80%}}>
+  <img src="./images/trees_per_species_bar.png" alt="fig3" class="centeredImage" style="width:80%">
 </figure>
 
 > Figure 3: The occurences of the most common tree species in San Francisco
 
 The following table and maps show the location of these species across San Francisco.
 
-TODO: add tree images next to maps of species?
 <table>
 	<tbody>
 		<tr>
 			<td><b>Species name</b></td>
 			<td><b>Number of trees</b></td>
 			<td><b>Map</b></td>
+			<td><b>Image</b></td>
 		</tr>
 		<tr>
 			<td>Platanus x hispanica - Sycamore: London Plane</td>
 			<td>11680</td>
 			<td><iframe src="./maps/map_species_1.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_platanus.jpg" alt="species1" style="height:400px"></td>
 		</tr>
 		<tr>
 			<td>Metrosideros excelsa - New Zealand Xmas Tree</td>
 			<td>8757</td>
 			<td><iframe src="./maps/map_species_2.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_metrosideros.jpg" alt="species1" style="height:400px"></td>
 		</tr>
 		<tr>
 			<td>Lophostemon confertus - Brisbane Box</td>
 			<td>8735</td>
 			<td><iframe src="./maps/map_species_3.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_lophostemon.jpg" alt="species1" style="height:400px"></td>
 		</tr>
 		<tr>
 			<td>Tristaniopsis laurina - Swamp Myrtle</td>
 			<td>7400</td>
 			<td><iframe src="./maps/map_species_4.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_tristaniopsis.jpg" alt="species1" style="height:400px"></td>
 		</tr>
 		<tr>
 			<td>Pittosporum undulatum -  Victorian Box</td>
 			<td>7191</td>
 			<td><iframe src="./maps/map_species_5.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_pittosporum.jpg" alt="species1" style="height:400px"></td>
 		</tr>
 		<tr>
 			<td>Prunus cerasifera - Cherry Plum</td>
 			<td>6700</td>
 			<td><iframe src="./maps/map_species_6.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_prunus.jpg" alt="species1" style="height:400px"></td>
 		</tr>
 		<tr>
 			<td>Magnolia grandiflora - Southern Magnolia</td>
 			<td>6360</td>
 			<td><iframe src="./maps/map_species_7.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_magnolia.jpeg" alt="species1" style="height:400px"></td>
 		</tr>
 		<tr>
 			<td>Arbutus 'Marina' - Hybrid Strawberry Tree</td>
 			<td>5660</td>
 			<td><iframe src="./maps/map_species_8.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_arbutus.jpg" alt="species1" style="height:400px"></td>
 		</tr>
 		<tr>
 			<td>Ficus microcarpa nitida 'Green Gem' - Indian Laurel Fig Tree 'Green Gem'</td>
 			<td>5574</td>
 			<td><iframe src="./maps/map_species_9.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_ficus.jpg" alt="species1" style="height:400px"></td>
 		</tr>
 		<tr>
 			<td>Prunus serrulata 'Kwanzan' - Kwanzan Flowering Cherry</td>
 			<td>4004</td>
 			<td><iframe src="./maps/map_species_10.html" width="450px" height="400px"></iframe></td>
+			<td><img src="./images/species_kwanzan.jpg" alt="species1" style="height:400px"></td>
 		</tr>
 	</tbody>
 </table>
