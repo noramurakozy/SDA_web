@@ -104,7 +104,7 @@ TODO: add tree images next to maps of species?
 The data contains 571 species across 180611 trees, from which the **10 most common types** are the following:
 
 <figure>
-  <img src="./images/trees_per_species_bar.png" alt="fig3" class="centeredImage">
+  <img src="./images/trees_per_species_bar.png" alt="fig3" class="centeredImage" style={{width: 80%}}>
 </figure>
 
 > Figure 3: The occurences of the most common tree species in San Francisco
@@ -172,15 +172,15 @@ The following table and maps show the location of these species across San Franc
 </table>
 
 **Trees over the years**
-- plot: animation of planted trees over the years
 - number of trees planted per year (avg, min, max)
 - year with the least planted trees
 - year with the most planted trees
 - average number of planted trees per year
 - plot: bar plot over average number of planted trees per year by type and adding its standard deviation
-- define 'focus trees'?
 - plot: bar charts displaying the year-by-year development of each tree types in the range X-Y
+- plot: animation of planted trees over the years
 - comment on 3 interesting trends in the plot
+- define 'focus trees'?
 
 Trees per area
 - which area has the most trees (based on zip code)
