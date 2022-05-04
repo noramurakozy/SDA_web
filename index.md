@@ -233,7 +233,7 @@ We could see from the previous analyzations that there are some year that were e
 Firstly, the boundaries are defined for a 24 months rolling window and with the help of this window's standard deviations, the lower theshold (by extracting the std from the mean) and upper threshold (by adding the std to the mean) are defined. The outliers are incidated with red dots on the plot and we can see that in 2000 exceptionally large amount of trees were planted compared to the average. There are other outliers as well, but they are not that significant. There are **11 outliers** in total out of the 593 total data points.
 
 <figure>
-  <img src="./images/outliers_rolling.png" alt="fig7" style="width:100%">
+  <img src="./images/outliers_rolling.png" alt="fig7" class="centeredImage" style="width:80%">
 </figure>
 
 > Figure 7: Outliers outside of the rolling area of the average number of trees planted
@@ -242,7 +242,7 @@ Firstly, the boundaries are defined for a 24 months rolling window and with the 
 The IsolationForest ‘isolates’ observations by randomly selecting a feature and then randomly selecting a split value between the maximum and minimum values of the selected feature. Since recursive partitioning can be represented by a tree structure, the number of splittings required to isolate a sample is equivalent to the path length from the root node to the terminating node. Random partitioning produces noticeably shorter paths for anomalies. Hence, when a forest of random trees collectively produce shorter path lengths for particular samples, they are highly likely to be anomalies. [1](https://scikit-learn.org/stable/modules/outlier_detection.html#isolation-forest) We set the contanimation to the ratio of outliers and total number of datapoints, which in our case was 0.0185.
 
 <figure>
-  <img src="./images/outliers_iforest.png" alt="fig8" style="width:100%">
+  <img src="./images/outliers_iforest.png" alt="fig8" class="centeredImage" style="width:80%">
 </figure>
 
 > Figure 8: Outliers in number of trees planted calculated with the IsolationForest algorithm
