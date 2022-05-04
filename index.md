@@ -18,6 +18,7 @@ This webpage was created as an assignment for the [Social Data Analysis and Visu
 
 ### Motivation
 TODO
+SF Urban Forest plan: https://sfplanning.org/urban-forest-plan
 - why this topic is interesting
 - how trees influence our lives
 - what do we want to investigate
@@ -34,7 +35,7 @@ PLOTS HOWTO:
 
 ### Datasets
 TODO
-- why did we choose SF data
+- why did we choose SF data (https://sfplanning.org/urban-forest-plan)
 - link to the notebook
 
 #### Tree dataset
@@ -252,9 +253,9 @@ The algorithm found 11 anomalies, but interestingly, these dates are different f
 These were the dates found by the rolling calculations: `1979-04-01`, `1980-04-01`, `1982-04-01`, `1985-10-01`, `1992-05-01`, **`2000-06-01`**, `2005-12-01`, `2006-03-01`, `2014-12-01`, `2015-01-01`, `2017-10-01`
 And by the IsolationForest: `1996-11-01`, `1998-05-01`, `1998-06-01`, **`2000-06-01`**, `2000-07-01`, `2002-05-01`, `2007-03-01`, `2008-02-01`, `2008-06-01`, `2008-07-01`, `2009-07-01`.
 
+**TODO: found an article what happened on 2000-06-01**
 
 
-- comment on anomalies
 - plot: animation of planted trees over the years
 
 Trees per area
