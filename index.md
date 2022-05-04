@@ -44,7 +44,7 @@ The dataset is the list of maintained street trees in San Francisco including th
 This section gives an overview of the data by showing the basic statistics of the dataset.
 
 <figure>
-  <img src="./images/sf_street_trees_info.png" alt="fig1" class="image">
+  <img src="./images/sf_street_trees_info.png" alt="fig1" class="centeredImage">
 </figure>
 
 > Figure 1: Statistics of Street Trees data in San Francisco
@@ -99,9 +99,17 @@ with only 1 occurence.
 	</figure>
 </div>
 
-TODO: fix image ticks that are hidden on bar chart (and add bar chart)
+TODO: add tree images next to maps of species?
 
 The data contains 571 species across 180611 trees, from which the **10 most common types** are the following:
+
+<figure>
+  <img src="./images/trees_per_species_bar.png" alt="fig3" class="centeredImage">
+</figure>
+
+> Figure 3: The occurences of the most common tree species in San Francisco
+
+The following table and maps show the location of these species across San Francisco.
 
 <table>
 	<tbody>
@@ -163,9 +171,9 @@ The data contains 571 species across 180611 trees, from which the **10 most comm
 	</tbody>
 </table>
 
-Trees over the years
+**Trees over the years**
 - plot: animation of planted trees over the years
-- number of trees planted per year
+- number of trees planted per year (avg, min, max)
 - year with the least planted trees
 - year with the most planted trees
 - average number of planted trees per year
