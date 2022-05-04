@@ -122,61 +122,61 @@ The following table and maps show the location of these species across San Franc
 			<td>Platanus x hispanica - Sycamore: London Plane</td>
 			<td>11680</td>
 			<td><iframe src="./maps/map_species_1.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_platanus.jpg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_platanus.jpg" alt="species1"></td>
 		</tr>
 		<tr>
 			<td>Metrosideros excelsa - New Zealand Xmas Tree</td>
 			<td>8757</td>
 			<td><iframe src="./maps/map_species_2.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_metrosideros.jpg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_metrosideros.jpg" alt="species2"></td>
 		</tr>
 		<tr>
 			<td>Lophostemon confertus - Brisbane Box</td>
 			<td>8735</td>
 			<td><iframe src="./maps/map_species_3.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_lophostemon.jpg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_lophostemon.jpg" alt="species3"></td>
 		</tr>
 		<tr>
 			<td>Tristaniopsis laurina - Swamp Myrtle</td>
 			<td>7400</td>
 			<td><iframe src="./maps/map_species_4.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_tristaniopsis.jpg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_tristaniopsis.jpg" alt="species4"></td>
 		</tr>
 		<tr>
 			<td>Pittosporum undulatum -  Victorian Box</td>
 			<td>7191</td>
 			<td><iframe src="./maps/map_species_5.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_pittosporum.jpg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_pittosporum.jpg" alt="species5"></td>
 		</tr>
 		<tr>
 			<td>Prunus cerasifera - Cherry Plum</td>
 			<td>6700</td>
 			<td><iframe src="./maps/map_species_6.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_prunus.jpg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_prunus.jpg" alt="species6"></td>
 		</tr>
 		<tr>
 			<td>Magnolia grandiflora - Southern Magnolia</td>
 			<td>6360</td>
 			<td><iframe src="./maps/map_species_7.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_magnolia.jpeg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_magnolia.jpeg" alt="species7"></td>
 		</tr>
 		<tr>
 			<td>Arbutus 'Marina' - Hybrid Strawberry Tree</td>
 			<td>5660</td>
 			<td><iframe src="./maps/map_species_8.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_arbutus.jpg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_arbutus.jpg" alt="species8"></td>
 		</tr>
 		<tr>
 			<td>Ficus microcarpa nitida 'Green Gem' - Indian Laurel Fig Tree 'Green Gem'</td>
 			<td>5574</td>
 			<td><iframe src="./maps/map_species_9.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_ficus.jpg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_ficus.jpg" alt="species9"></td>
 		</tr>
 		<tr>
 			<td>Prunus serrulata 'Kwanzan' - Kwanzan Flowering Cherry</td>
 			<td>4004</td>
 			<td><iframe src="./maps/map_species_10.html" width="450px" height="400px"></iframe></td>
-			<td><img src="./images/species_kwanzan.jpg" alt="species1" style="height:400px"></td>
+			<td><img src="./images/species_kwanzan.jpg" alt="species10"></td>
 		</tr>
 	</tbody>
 </table>
