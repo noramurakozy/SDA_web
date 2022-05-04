@@ -63,6 +63,7 @@ In the following table we introduce the columns we use for analysis.
 | ```Latitude``` | Y coordinate of tree | Number |
 | ```Police Districts``` | Indentifier number of police district where the tree is located | Number |
 | ```Zip Codes``` | Zip code of the area where the tree is located | Number |
+> Table 1: Columns used for analysis and their short description
 
 *Note: Around 16000 trees do not have location data or valid species type, those were removed from the dataset during preprocessing and will not be used during the analysis. **There are 180611 unique trees in the reduced dataset.***
 
@@ -169,18 +170,26 @@ TODO: add tree images next to maps of species?
 		</tr>
 	</tbody>
 </table>
+> Table 2: The occurences of the most common tree species in San Francisco and their location on interactive maps
 
 **Trees over the years**
 
 In 2008 4278 trees were planted, which is the hightest amount in the registered time period, although in 1955 only 6 trees were planted, which is the lowest amount in the registered time period. On average, 1077 trees were planted per year, 99 per month and 8 per day.
 
 <figure>
-  <img src="./images/trees_per_year_bar.png" alt="fig4" class="centeredImage" style={{width: 80%}}>
+  <img src="./images/trees_per_year_bar.png" alt="fig4" class="centeredImage" style="width:80%">
 </figure>
 
 > Figure 4: The number of trees planted in each year between 1955 and 2022 in San Francisco
 
-- plot: bar plot over average number of planted trees per year by type and adding its standard deviation
+By calculating the standard daviation of the number of trees over the years, we can observe the extent of the difference of number the planted trees compared to the average. As standard deviation is the quantity expressing how much the members of a group differ from the mean value for the group, we can conclude here, that for the trees in the *Arbutus Marina* species, the planted trees per year strongly differ from the mean of the yearly count. We can notice the same pattern in all the selected species, although in the case of *Ficus microcarpa nitida* it's not that significant. The following figure illustrates the average number of planted trees per year by species and their standard deviations as error bars. Due to the large selection of tree species (571 unique species in total), we decided to work with the most common species which were introduced earlier in Table 2.
+
+<figure>
+  <img src="./images/trees_avg_per_year_std_bar.png" alt="fig5" class="centeredImage" style="width:80%">
+</figure>
+
+> Figure 5: The average number of trees planted per year by species and their standard deviation
+
 - plot: bar charts displaying the year-by-year development of each tree types in the range X-Y
 - plot: animation of planted trees over the years
 - comment on 3 interesting trends in the plot
