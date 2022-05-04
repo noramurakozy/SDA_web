@@ -258,9 +258,24 @@ And by the IsolationForest: `1996-11-01`, `1998-05-01`, `1998-06-01`, **`2000-06
 
 - plot: animation of planted trees over the years
 
-Trees per area
-- which area has the most trees (based on zip code)
-- plot: plot zip code areas and color based on the number of trees? (we have done it for vehicle thefts on Sundays in PDDistricts)
+**Trees per area**
+Another way to examine the tree population in San Francisco is to visualize their distribution across the Police Districts. Fortunately, the dataset we're working with provides that information about the individual tree. This type of visualisation can help us later while investigated the relevance of trees in a particular area in terms of crime occurences. The following interactive map shows the number of trees planted in each Police District, the darker the blue color, the more trees are planted there. *Tip: Hovering over an area gives more details about the district.*
+
+<iframe src="./maps/tree_count_district.html" width="100%" height="500px"></iframe>
+
+> Figure 9: Interactive map of number of trees planted in the different police districts in San Francisco
+
+By looking at the map, we can conclude that the least amount of trees are in the Tenderloid district (1001) and most are located in Taraval (28551) and Ingleside (29738). Although, the reason behind these results can be the size of these areas. Tenderloid is really small compared to the latter districts, so it physically can't contain a lot of trees compared to the bigger districts. So, a more relevant visualisation here can be the density of trees in 100mx100m squares in San Francisco, because despite the low count in Tenderloin, the density might be higher than in the districts with bigger area. The following figure illustrates the density of trees in 100mx100m squares, the ligher the color, the higher the tree density in that area.
+
+<figure>
+  <img src="./images/tree_density_100x100.png" alt="fig10" class="centeredImage" style="width:60%">
+</figure>
+
+> Figure 10: Number of trees per 100m x 100m squares of San Francisco
+
+The above figure shows that just below Tenderloin, on the edge of the Southern, Northern and Mission districts, the tree density is quite high. Our previous assumption that Tenderloin might have high tree coverage is not true, that makes Tenderloin a district with low amount of trees with low coverage.
+
+Although this visualisation shows other interesting insights on the tree distribution in specific areas. There is a clear pattern of 2 vertical streets full of trees in the lower left corner in Taraval. Those streets are Sunset Boulevard and the Junipero Serra Boulevard. Sunset Boulevard is famous of its [beautiful trees and bushes](https://www.sfparksalliance.org/our-parks/parks/sunset-blvd) along the road, which gives a great free time activity environment for runners, cyclists, families etc. The final section of the Junipero Serra Boulevard is also [aligned with trees](https://en.wikipedia.org/wiki/Junipero_Serra_Boulevard) quite densly, but that's only true for its final section, as we can read it from the picture as well.
 
 #### Crime dataset
 TODO
