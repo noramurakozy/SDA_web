@@ -195,6 +195,14 @@ In 2008 4278 trees were planted, which is the hightest amount in the registered 
 
 > Figure 4: The number of trees planted in each year between 1955 and 2022 in San Francisco
 
+The following movie is a good representation of the planted trees over the years. The movie shows the planted trees in each year between 1972 and 2022. (We decided to show the movie from 1972 and not 1955, because from 1972 the city started planting trees in each year without gap, before that, the planting activity was not that significant.) 
+
+We can see that most of the time the trees were scattered over the city. Although there are some years we can highlight, when the organization focused on specific areas or districts in San Francisco. For example, in 2006 the city really focused on planting trees along the 25th, 26th and 27th Avenue in Taraval and along the Ingalls street in Bayview. In 2007 many trees were planted along the 28th and 24th Avenue in Taraval and along the main streets of the Southern districts. In 2008, most of the trees were planted in Richmond disctrict (just above the Golden Gate Park), the street pattern is outlined clearly as well. These are the highlights that worth mentioning, but each year can be investigated by playing the movie below, pausing it, step between the years and zoom in on the map to have closer look.
+
+<iframe src="./maps/map_trees_animation.html" width="100%" height="500px"></iframe>
+
+> Figure 5: Interactive map movie of the planted trees between 1972 and 2002
+
 By calculating the standard daviation of the number of trees over the years, we can observe the extent of the difference of number the planted trees compared to the average. As standard deviation is the quantity expressing how much the members of a group differ from the mean value for the group, we can conclude here, that for the trees in the *Arbutus Marina* species, the planted trees per year strongly differ from the mean of the yearly count. We can notice the same pattern in all the selected species, although in the case of *Ficus microcarpa nitida* it's not that significant. Figure 5 illustrates the average number of planted trees per year by species and their standard deviations as error bars. Due to the large selection of tree species (571 unique species in total), we decided to work with the most common species which were introduced earlier in Table 2, but listed here as well:
 
 *Focus species:*
@@ -210,18 +218,18 @@ By calculating the standard daviation of the number of trees over the years, we 
 - Platanus x hispanica :: Sycamore: London Plane
 
 <figure>
-  <img src="./images/trees_avg_per_year_std_bar.png" alt="fig5" class="centeredImage" style="width:80%">
+  <img src="./images/trees_avg_per_year_std_bar.png" alt="fig6" class="centeredImage" style="width:80%">
 </figure>
 
-> Figure 5: The average number of trees planted per year by species and their standard deviation
+> Figure 6: The average number of trees planted per year by species and their standard deviation
 
 Another interesting change to investigate is the year-by-year development of the tree species. On Figure 6 we can see how many trees were planted for each species per year. The green color indicates high amount of planted trees in the year, read indicates low amount and the yellow color transitions for the amounts in between. 
 
 <figure>
-  <img src="./images/species_yearly_dev_bar.png" alt="fig6" style="width:100%">
+  <img src="./images/species_yearly_dev_bar.png" alt="fig7" style="width:100%">
 </figure>
 
-> Figure 6: Yearly amount of planted trees per focus tree species
+> Figure 7: Yearly amount of planted trees per focus tree species
 
 These are the most interesting observations we can read from these plots:
 - *Ficus microcarpa nitida 'Green Gem' :: Indian Laurel Fig Tree 'Green Gem'*: Despite the low amount of trees planted from this species in general (maximum is less than 40 in a year), the number of trees per year was quite consistent and in most of the years, the amount was close to the max number of planted trees from this species. Seeing the consistency across the years also supported by the standard deviation of this species, shown in Figure 5, as this was the type which had the lowest standard deviation, meaningly the fluctuation of the number of planted trees throughout the years is low.
@@ -237,19 +245,19 @@ We could see from the previous analyzations that there are some year that were e
 Firstly, the boundaries are defined for a 24 months rolling window and with the help of this window's standard deviations, the lower theshold (by extracting the std from the mean) and upper threshold (by adding the std to the mean) are defined. The outliers are incidated with red dots on the plot and we can see that in 2000 exceptionally large amount of trees were planted compared to the average. There are other outliers as well, but they are not that significant. There are **11 outliers** in total out of the 593 total data points.
 
 <figure>
-  <img src="./images/outliers_rolling.png" alt="fig7" class="centeredImage" style="width:80%">
+  <img src="./images/outliers_rolling.png" alt="fig8" class="centeredImage" style="width:80%">
 </figure>
 
-> Figure 7: Outliers outside of the rolling area of the average number of trees planted
+> Figure 8: Outliers outside of the rolling area of the average number of trees planted
 
 *Isolation Forest*
 The IsolationForest ‘isolates’ observations by randomly selecting a feature and then randomly selecting a split value between the maximum and minimum values of the selected feature. Since recursive partitioning can be represented by a tree structure, the number of splittings required to isolate a sample is equivalent to the path length from the root node to the terminating node. Random partitioning produces noticeably shorter paths for anomalies. Hence, when a forest of random trees collectively produce shorter path lengths for particular samples, they are highly likely to be anomalies. [1](https://scikit-learn.org/stable/modules/outlier_detection.html#isolation-forest) We set the contanimation to the ratio of outliers and total number of datapoints, which in our case was 0.0185.
 
 <figure>
-  <img src="./images/outliers_iforest.png" alt="fig8" class="centeredImage" style="width:80%">
+  <img src="./images/outliers_iforest.png" alt="fig9" class="centeredImage" style="width:80%">
 </figure>
 
-> Figure 8: Outliers in number of trees planted calculated with the IsolationForest algorithm
+> Figure 9: Outliers in number of trees planted calculated with the IsolationForest algorithm
 
 The algorithm found 11 anomalies, but interestingly, these dates are different from the other 11 outliers found by the rolling method. The only matching date for outliers is *2000-06-01*.
 
@@ -258,24 +266,21 @@ And by the IsolationForest: `1996-11-01`, `1998-05-01`, `1998-06-01`, **`2000-06
 
 **TODO: found an article what happened on 2000-06-01**
 
-
-- plot: animation of planted trees over the years
-
 **Trees per area**
 
 Another way to examine the tree population in San Francisco is to visualize their distribution across the Police Districts. Fortunately, the dataset we're working with provides that information about the individual tree. This type of visualisation can help us later while investigated the relevance of trees in a particular area in terms of crime occurences. The following interactive map shows the number of trees planted in each Police District, the darker the blue color, the more trees are planted there. *Tip: Hovering over an area gives more details about the district.*
 
 <iframe src="./maps/tree_count_district.html" width="100%" height="500px"></iframe>
 
-> Figure 9: Interactive map of number of trees planted in the different police districts in San Francisco
+> Figure 10: Interactive map of number of trees planted in the different police districts in San Francisco
 
 By looking at the map, we can conclude that the least amount of trees are in the Tenderloid district (1001) and most are located in Taraval (28551) and Ingleside (29738). Although, the reason behind these results can be the size of these areas. Tenderloid is really small compared to the latter districts, so it physically can't contain a lot of trees compared to the bigger districts. So, a more relevant visualisation here can be the density of trees in 100mx100m squares in San Francisco, because despite the low count in Tenderloin, the density might be higher than in the districts with bigger area. The following figure illustrates the density of trees in 100mx100m squares, the ligher the color, the higher the tree density in that area.
 
 <figure>
-  <img src="./images/tree_density_100x100.png" alt="fig10" class="centeredImage" style="width:60%">
+  <img src="./images/tree_density_100x100.png" alt="fig11" class="centeredImage" style="width:60%">
 </figure>
 
-> Figure 10: Number of trees per 100m x 100m squares of San Francisco
+> Figure 11: Number of trees per 100m x 100m squares of San Francisco
 
 The above figure shows that just below Tenderloin, on the edge of the Southern, Northern and Mission districts, the tree density is quite high. Our previous assumption that Tenderloin might have high tree coverage is not true, that makes Tenderloin a district with low amount of trees with low coverage.
 
