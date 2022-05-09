@@ -309,7 +309,9 @@ The San Fransisco crime dataset is foreign no noone who has done the Social Data
 
 
 Here we can see the GPS loication of each interaction in the dataset
-  <iframe src="./maps/map_crimes_all.html" width="100%" height="500px"></iframe> # this map wont work since it is to large. Do a picture with a good resolution instead?
+<figure>
+  <img src="./images/map_crimes_all.jpg" alt="fig4" class="centeredImage" style="width:80%">
+</figure>
 
 ##### Fundamental aspects of the data
 Categories
