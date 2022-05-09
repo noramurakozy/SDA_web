@@ -1,5 +1,7 @@
 This webpage was created as an assignment for the [Social Data Analysis and Visualisation](https://kurser.dtu.dk/course/02806) course at DTU in 2022. The site presents our findings on the connection between tree density and crime occurences in San Francisco. Please find the repository of this GitHub page **[here](https://github.com/noramurakozy/SDA_web/tree/gh-pages)**.
 
+TODO: regenerate TOC when we're don
+
 ## Table of contents
 - [Introduction](#introduction)
   * [Motivation](#motivation)
@@ -15,18 +17,31 @@ This webpage was created as an assignment for the [Social Data Analysis and Visu
 - [References](#references)
 
 ## Introduction
+This section introduces our motivation behind choosing this topic the describes the 2 datasets we're using in detail.
 
 ### Motivation
-TODO
-SF Urban Forest plan: https://sfplanning.org/urban-forest-plan
-- why this topic is interesting
-- how trees influence our lives
-- what do we want to investigate
-- what questions do we want to answer
+First, when we were looking for a dataset to work on and analyse in the 'green' topic, we all found it promising to have a look at trees and their influence on our lives. In addition, almost every city has its own maintained dataset of trees including their species, planting date and so on. During the research process we learned that trees have a great influence on people's lives and their environment. According to [this article](https://www.treesaregood.org/treeowner/benefitsoftrees), having trees in our everyday environment has the following benefits:
+- **Social benefits**
+	- Help people feel serene, peaceful, restful, and tranquil
+	- Reduce workplace stress and fatigue
+	- Decrease the recovery time following medical procedures
+	- *Lower the amount of criminal activity in a community*
+- **Communal benefits**
+	- Serve architectural and engineering functions by providing privacy, emphasizing views or obstructing objectionable views
+	- Reduce noise and glare
+	- Bring natural elements and wildlife habitats into urban surroundings
+- **Environmental benefits**
+	- Filter the air we breathe by removing dust and other particles
+	- Cool homes in the summer and allow the winter sun to heat homes when they lose their leaves4
+	- Serve as a windbreak
 
-TODO
-- introduce the structure of the page
-- provide link to the notebook
+and many more.
+
+In the social benefits category, we can see that the presence of trees can lower the criminal activity in an area. This fact was one of the inspirations of the proposed [urban forest plan](https://sfplanning.org/urban-forest-plan) in San Francisco. They list 'reduced crime rate' as one of the benefits of planting trees along the streets in the city. Two papers are also cited on the page to prove that trees really can have an influence on crime rate in a city [[1]](https://www.sciencedirect.com/science/article/abs/pii/S0169204612000977#:~:text=The%20more%20conservative%20spatially%20adjusted,roughly%2012%25%20decrease%20in%20crime.) [[2]](https://journals.sagepub.com/doi/abs/10.1177/0013916501333002#:~:text=Although%20vegetation%20has%20been%20positively,and%20less%20aggressive%20and%20violent). These studies were made based on data collected in other cities in the USA, but if planting trees worked in different settings, why not to try in San Francisco as well? Since, we haven't found any resource on the correlation between tree coverage and crime rate in San Francisco, we decided to investigate this topic and find out if it's worth planting more trees in order to turn San Francisco into a more peaceful city.
+
+This website guides the reader through the process of investigating the street tree and crime dataset of San Francisco and gives insights into the connection between density of trees in specific areas and the evolution of crimes in the same areas. The website serves as the main information source and tells the story of our project by including pictures, interactive maps and our observations for each small topic we investigated. The code and calculations can be found here if the reader wants to have a deeper look: **TODO link to the notebook**.
+
+TODO: delete when we're ready with the proofreading
 
 PLOTS HOWTO:
   - short introduction why do we show this plot
@@ -34,9 +49,7 @@ PLOTS HOWTO:
   - observations written under the plot
 
 ### Datasets
-TODO
-- why did we choose SF data (https://sfplanning.org/urban-forest-plan)
-- link to the notebook
+This section describes the 2 datasets we were working with, starting with the street tree dataset in San Francisco. We provide the same statistics and insights to the dataset, so the reader can easily make a connectiong between the 2 datasets. Further analysis between the two can be found in [Section 2](#analysing-the-correlation-between-tree-density-and-crime-occurences).
 
 #### Tree dataset
 The dataset is the list of maintained street trees in San Francisco including their planting date, species, and location. Please note, that the dataset is updated quite frequently, but since we access the data through the API of the OpenSF organization, our analysis remains up-to-date and shows the visualisations with the latest data. The data is openly accessible **[here](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)**.
@@ -201,7 +214,7 @@ We can see that most of the time the trees were scattered over the city. Althoug
 
 <iframe src="./maps/map_trees_animation.html" width="100%" height="500px"></iframe>
 
-> Figure 5: Interactive map movie of the planted trees between 1972 and 2002
+> Figure 5: Interactive map movie of the planted trees between 1972 and 2022
 
 By calculating the standard daviation of the number of trees over the years, we can observe the extent of the difference of number the planted trees compared to the average. As standard deviation is the quantity expressing how much the members of a group differ from the mean value for the group, we can conclude here, that for the trees in the *Arbutus Marina* species, the planted trees per year strongly differ from the mean of the yearly count. We can notice the same pattern in all the selected species, although in the case of *Ficus microcarpa nitida* it's not that significant. Figure 5 illustrates the average number of planted trees per year by species and their standard deviations as error bars. Due to the large selection of tree species (571 unique species in total), we decided to work with the most common species which were introduced earlier in Table 2, but listed here as well:
 
@@ -375,29 +388,39 @@ Let's then take a look at the distribution of the groups(Violent, non violent an
 
 
 ## Analysing the correlation between tree density and crime occurences
-- what are we expecting
-- what questions do we want to answer
-  - connection between number of trees and number of crimes in general? (in 100mx100x areas on heatmap)
+During the analysis, we expect to get the same results as we have read in the papers written about the connection between trees and crime rate in an area. We expect to find results that can support the hypothesis, according to which, the more trees are planted the less crime incidents happen in a city. To find out, we calculate the correlation between tree density and crimes by investigating specific areas, also, we build a machine learning model that tries to predict the number of crimes in a month based on the number of planted trees. We also predict the number of crimes per area based on the amount of trees planted.
+
+### Correlation per area
+#### The city as a whole
+- connection between number of trees and number of crimes in general? (in 100mx100x areas on heatmap)
     - plot: heatmap of crimes
     - plot: heatmap of trees
     - calculate correlation
     - draw conclusion
-  - is there an area where the more trees are the less crimes happen and vica versa?
+#### Per district
+- is there a district where the more trees are the less crimes happen and vica versa?
     - plot: heatmap of crimes per pddistrict
     - plot: heatmap of trees per pddistrict
-      - define zip codes for each pddistrict
     - calculate correlation for each area
     - draw conclusion
-  - is there a drop in crimes as trees are planted over time?
+### Correlation in time
+- is there a drop in crimes as trees are planted over time?
     - animation of planting trees over the year + crimes in the same animation with different color?
     - make observations
     - support observations with calculations and data
-  - prediction of number of crimes in area if X number of trees are planted
-    - machine learning model
+### Correlation in crime type and tree species (maybe not?)
+todo, I don't know how (yet)
+
+### Machine learning
+#### Nr. of crimes in a month based on nr. of trees planted
+- prediction of number of crimes in a month if X number of trees are planted
     - linear regression
-    - checking the trees after the last planting date, so we consider "all" trees that can influence the number of crimes
-    - do linear regression for tree types vs crime types as well
-    - check correlation between tree types and crimes types
+#### Nr. of crimes (in an area) based on nr. of trees planted of a specific species
+- prediction of number of crimes if X number of trees are planted of a specific species
+    - linear regression
+#### Nr. of crimes in a Police District based on nr. of trees planted (maybe not?)
+- prediction of number of crimes in a district if X number of trees are planted
+    - linear regression
 
 ## Conclusion
 - write conclusion of findings
