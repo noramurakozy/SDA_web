@@ -1,6 +1,6 @@
 This webpage was created as an assignment for the [Social Data Analysis and Visualisation](https://kurser.dtu.dk/course/02806) course at DTU in 2022. The site presents our findings on the connection between tree density and crime occurences in San Francisco. Please find the repository of this GitHub page **[here](https://github.com/noramurakozy/SDA_web/tree/gh-pages)**.
 
-TODO: regenerate TOC when we're don
+TODO: regenerate TOC when we're done
 
 ## Table of contents
 - [Introduction](#introduction)
