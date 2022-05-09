@@ -372,7 +372,9 @@ Crimes per area
 Let's then take a look at the distribution of the groups(Violent, non violent and non criminal)
 - Violent
 	- As we expect, when taking a look at the violent crimes we can see that they follow the distribution of the overall dataset quite closely with the major change being that the suburbs aren't as bright while the centeral area is even brighter.
-	- 
+	
+	
+	
 <figure>
   <img src="./images/violent_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
