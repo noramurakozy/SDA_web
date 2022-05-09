@@ -310,7 +310,7 @@ The San Fransisco crime dataset is foreign no noone who has done the Social Data
 
 Here we can see the GPS loication of each interaction in the dataset
 <figure>
-  <img src="./images/map_crimes_all.jpg" alt="fig4" class="centeredImage" style="width:80%">
+  <img src="./images/map_crimes_all.jpg" alt="fig4" class="centeredImage" style="width:100%">
 </figure>
 
 ##### Fundamental aspects of the data
@@ -327,7 +327,7 @@ Categories
 	-  
 Here we can see how the most common interactions compaire with each other
 <figure>
-  <img src="./images/crime_type_bar.png" alt="fig1" class="centeredImage">
+  <img src="./images/crime_type_bar.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
 
 - Due to there being so many crime types we decided to group them into three.
@@ -339,15 +339,15 @@ Here we can see how the most common interactions compaire with each other
 Interactions over the years
 - Here we can see how the number of interactions has changed ofter the years.
 <figure>
-  <img src="./images/crimes_per_month_bar.png" alt="fig1" class="centeredImage">
+  <img src="./images/crimes_per_month_bar.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
 - From this graph we can see that most interactions took place during 2015 with 151459 interactions while 2011 had the fewest with 126713. With the average being 138955 or 380 interactions per day.
 - We then create a seperate dataframe conaining what we cann focus interactions, containing GRAND THEFT FROM LOCKED AUTO, LOST PROPERTY, BATTERY, STOLEN AUTOMOBILE, DRIVERS LICENSE, SUSPENDED OR REVOKED, AIDED CASE, MENTAL DISTURBED, WARRANT ARREST, SUSPICIOUS OCCURRENCE, PETTY THEFT FROM LOCKED AUTO, PETTY THEFT OF PROPERTY. Which are the 10 most common interactions, and took a closer look at those
 <figure>
-  <img src="./images/type_yearly_dev_bar.png" alt="fig1" class="centeredImage">
+  <img src="./images/type_yearly_dev_bar.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
 <figure>
-  <img src="./images/type_avg_per_year_std_bar.png" alt="fig1" class="centeredImage">
+  <img src="./images/type_avg_per_year_std_bar.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
 - From the second graph we can see that there is a massive standard deviation in Grand theft from locked auto, this is due to the massive increase in the last 4 years of datacollection as can be seen in the first graph.
 - There is then a massive drop in Petty theft from locked auto in 2010 and 2011 and a massive increase in normal petty theft at the same time. This might be due to something like a police clampdown on auto theft that then lost steam, or a lack of reporting.
