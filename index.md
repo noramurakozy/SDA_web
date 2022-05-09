@@ -201,7 +201,7 @@ We can see that most of the time the trees were scattered over the city. Althoug
 
 <iframe src="./maps/map_trees_animation.html" width="100%" height="500px"></iframe>
 
-> Figure 5: Interactive map movie of the planted trees between 1972 and 2002
+> Figure 5: Interactive map movie of the planted trees between 1972 and 2022
 
 By calculating the standard daviation of the number of trees over the years, we can observe the extent of the difference of number the planted trees compared to the average. As standard deviation is the quantity expressing how much the members of a group differ from the mean value for the group, we can conclude here, that for the trees in the *Arbutus Marina* species, the planted trees per year strongly differ from the mean of the yearly count. We can notice the same pattern in all the selected species, although in the case of *Ficus microcarpa nitida* it's not that significant. Figure 5 illustrates the average number of planted trees per year by species and their standard deviations as error bars. Due to the large selection of tree species (571 unique species in total), we decided to work with the most common species which were introduced earlier in Table 2, but listed here as well:
 
@@ -295,6 +295,8 @@ Although this visualisation shows other interesting insights on the tree distrib
   - The SF crime dataset totals to 538 MB, after cutting out 2018 the dataset contains 2084325 rows and 38 columns, containing all interactions from the 1st of January 2003 all the way t the 31st of December 2017, as mentioned before data collection was halted midway into 2018 so we cut that year out to do our analysis only on full years as many of our calculations are based on total numbers over the spanm of a whole year.
 
   - map of crimes? TODO how the fuck do I include a map?
+  - like this: (it won't render in the preview in edit mode, but only will be visible on the website)
+  <iframe src="./maps/name_of_the_map.html" width="100%" height="500px"></iframe>
 
 ##### Fundamental aspects of the data
 Categories
