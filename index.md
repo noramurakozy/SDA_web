@@ -371,22 +371,26 @@ Crimes per area
 
 Let's then take a look at the distribution of the groups(Violent, non violent and non criminal)
 - Violent
+	- As we expect, when taking a look at the violent crimes we can see that they follow the distribution of the overall dataset quite closely with the major change being that the suburbs aren't as bright while the centeral area is even brighter.
+	- 
 <figure>
   <img src="./images/violent_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
-	- As we expect, when taking a look at the violent crimes we can see that they follow the distribution of the overall dataset quite closely with the major change being that the suburbs aren't as bright while the centeral area is even brighter.
+
 
 - Next taking a look at non violent crimes
+	- Again we can see a cluster in the downtown are but the overall graph is far darker than the previous one, so while overall there are far fewer non violent crimes in the wider SF area, the central districts maintain a high number.
+
 <figure>
   <img src="./images/nonViolent_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
-	- Again we can see a cluster in the downtown are but the overall graph is far darker than the previous one, so whule overall there are far fewer non violent crimes in the wider SF area, the central districts maintain a high number.
 
 - Finally the non crimes
+	- Surprisingly this plot tracks the non violent one very closely. We would not be surprised if these last 2 graphs track the overall population distribution of people in SF with economic factors pushing the people who live in the downtown are to more violent activities.
  <figure>
   <img src="./images/nonCrime_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
-	- Surprisingly this plot tracks the non violent one very closely. We would not be surprised if these last 2 graphs track the overall population distribution of people in SF with economic factors pushing the people who live in the downtown are to more violent activities.
+
 
 
 
