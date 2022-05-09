@@ -294,7 +294,8 @@ The San Fransisco crime dataset is foreign no noone who has done the Social Data
 - Now that the content has been mentioned here are some stats about the memory size of the dataset
   - The SF crime dataset totals to 538 MB, after cutting out 2018 the dataset contains 2084325 rows and 38 columns, containing all interactions from the 1st of January 2003 all the way t the 31st of December 2017, as mentioned before data collection was halted midway into 2018 so we cut that year out to do our analysis only on full years as many of our calculations are based on total numbers over the spanm of a whole year.
 
-  - map of crimes? TODO how the fuck do I include a map? FOUND IT
+
+Here we can see the GPS loication of each interaction in the dataset
   <iframe src="./maps/map_crimes_all.html" width="100%" height="500px"></iframe> # this map wont work since it is to large. Do a picture with a good resolution instead?
 
 ##### Fundamental aspects of the data
@@ -305,45 +306,39 @@ Categories
 	- BATTERY with 64927 occurances.TODO FOOTNOTE, WHAT DOES BATTERY MEAN(It is a subcategory of assault(find a source))
 	- STOLEN AUTOMOBILE with 63861 occurances.
 	- DRIVERS LICENSE, SUSPENDED OR REVOKED with 61903 occurances.
-- The least common interactions are then HAZARDOUS MATERIALS, STORE WITHOUT PERMIT, BURGLARY,HOTEL UNDER CONSTRUCTION, ATT. FORCIBLE, BIGAMY, INCEST, AND THE CRIME AGAINST NATURE (..., REFUSAL TO IDENTIFY, BOMBING OF POLICE BUILDING, CRIMES INVOLVING RECEIPTS OR TITLES, DISTURBANCE OF NON-RELIGIOUS, NON-POLITICAL AS, ROBBERY, VEHICLE FOR HIRE, ATT., W/ KNIFE, ACCIDENTAL LACERATIONS, SAFE BURGLARY OF A RESIDENCE WITH EXPLOSIVES, TRANSPORTATION OF OPIUM DERIVATIVE, PUBLIC UTILITY INFORMATION, FRAUDULENTLY OBTAI, PLANTING/CULTIVATING PEYOTE, SNIPER SCOPE, POSSESSION OF, HAZARDOUS MATERIALS, TRANSPORT WITHOUT PERMIT, ASSAULT TO ROB BANK WITH A GUN, ASSAULT TO ROB ON THE STREET W/DEADLY WEAPON, ASSAULT TO ROB WITH BODILY FORCE, ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ FUL, ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ SEM, VIOLATION OF CALIF UNEMPLOYMENT INSURANCE ACT, PERMIT VIOLATION, ADVERTISING HANDBILL DISTRIB, VETERAN OR EX-SERVICEMAN, FALSE REPRESENTATION AS, ATTEMPTED HOMICIDE BY SNIPING, TRANSPORTATION OF OPIUM, MERCHANDISE TITLE DOCUMENT FRAUD, FALSE REPRESENTATION TO SECONDHAND DEALER, UNSOLICITED FAX ADVERTISING, EMBEZZLEMENT, PETTY THEFT BY COLLECTOR. With one occurance each.
+- The least common interactions are then 
+	- HAZARDOUS MATERIALS, STORE WITHOUT PERMIT, BURGLARY,HOTEL UNDER CONSTRUCTION, ATT. FORCIBLE, BIGAMY, INCEST, AND THE CRIME AGAINST NATURE (..., REFUSAL TO IDENTIFY, BOMBING OF POLICE BUILDING, CRIMES INVOLVING RECEIPTS OR TITLES, DISTURBANCE OF NON-RELIGIOUS, NON-POLITICAL AS, ROBBERY, VEHICLE FOR HIRE, ATT., W/ KNIFE, ACCIDENTAL LACERATIONS, SAFE BURGLARY OF A RESIDENCE WITH EXPLOSIVES, TRANSPORTATION OF OPIUM DERIVATIVE, PUBLIC UTILITY INFORMATION, FRAUDULENTLY OBTAI, PLANTING/CULTIVATING PEYOTE, SNIPER SCOPE, POSSESSION OF, HAZARDOUS MATERIALS, TRANSPORT WITHOUT PERMIT, ASSAULT TO ROB BANK WITH A GUN, ASSAULT TO ROB ON THE STREET W/DEADLY WEAPON, ASSAULT TO ROB WITH BODILY FORCE, ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ FUL, ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ SEM, VIOLATION OF CALIF UNEMPLOYMENT INSURANCE ACT, PERMIT VIOLATION, ADVERTISING HANDBILL DISTRIB, VETERAN OR EX-SERVICEMAN, FALSE REPRESENTATION AS, ATTEMPTED HOMICIDE BY SNIPING, TRANSPORTATION OF OPIUM, MERCHANDISE TITLE DOCUMENT FRAUD, FALSE REPRESENTATION TO SECONDHAND DEALER, UNSOLICITED FAX ADVERTISING, EMBEZZLEMENT, PETTY THEFT BY COLLECTOR. 
+- With one occurance each.
 	-  
-- plot: bar plot over crime type occurences DONE
+Here we can see how the most common interactions compaire with each other
 <figure>
   <img src="./images/crime_type_bar.png" alt="fig1" class="centeredImage">
 </figure>
 
-- define and explain groups: violent, non-violent, non-crime
 - Due to there being so many crime types we decided to group them into three.
 	- Violent, containing all crimes where violence between 2 or more people took place.
 	- Non Violent, containing all crimes where no violence took place.
 	- Non Crime, containing all interactions where no illegal activity took place.
 
-insert heatmaps of
 
-
-Crimes over the years
-- number of crimes per year PLOT
+Interactions over the years
+- Here we can see how the number of interactions has changed ofter the years.
 <figure>
   <img src="./images/crimes_per_month_bar.png" alt="fig1" class="centeredImage">
 </figure>
 - From this graph we can see that most interactions took place during 2015 with 151459 interactions while 2011 had the fewest with 126713. With the average being 138955 or 380 interactions per day.
-- plot: bar plot over average number of crimes per year by type and adding its standard deviation
 - We then create a seperate dataframe conaining what we cann focus interactions, containing GRAND THEFT FROM LOCKED AUTO, LOST PROPERTY, BATTERY, STOLEN AUTOMOBILE, DRIVERS LICENSE, SUSPENDED OR REVOKED, AIDED CASE, MENTAL DISTURBED, WARRANT ARREST, SUSPICIOUS OCCURRENCE, PETTY THEFT FROM LOCKED AUTO, PETTY THEFT OF PROPERTY. Which are the 10 most common interactions, and took a closer look at those
-- plot: bar charts displaying the year-by-year development of each crime types in the range X-Y
 <figure>
   <img src="./images/type_yearly_dev_bar.png" alt="fig1" class="centeredImage">
 </figure>
 <figure>
   <img src="./images/type_avg_per_year_std_bar.png" alt="fig1" class="centeredImage">
 </figure>
-- plot: num and stdev of focus crimes
-- massive stdev in Grand theft from locked auto, from second graph we can see that that is due to a massive invrease in the last 4 years
-- dip in petty theft from locked auto in 2010 and 2011, why?
-- massive increase in Petty theft in 2010
+- From the second graph we can see that there is a massive standard deviation in Grand theft from locked auto, this is due to the massive increase in the last 4 years of datacollection as can be seen in the first graph.
+- There is then a massive drop in Petty theft from locked auto in 2010 and 2011 and a massive increase in normal petty theft at the same time. This might be due to something like a police clampdown on auto theft that then lost steam, or a lack of reporting.
 
 
 Crimes per area 
-REDO, WAS LOOKING AT WRONG MAPS, I NEED TO MAKE SOME MORE
 <iframe src="./maps/crime_all_count_district.html" width="100%" height="500px"></iframe>
 - Most crimes in Southern, why? Since it is the downtown area we would expect there to be more crimes here but this is the biggest area of the ones that make up the downtown area so does it have the biggest number due to it's size? Let't take a closer look at the density
 
@@ -357,9 +352,6 @@ REDO, WAS LOOKING AT WRONG MAPS, I NEED TO MAKE SOME MORE
   <img src="./images/crime_density_50x50.png" alt="fig1" class="centeredImage">
 </figure>
 - Now we can see more detail, we can also see that there is a large cluster that is encompassed by all the central sectors and Southern simply encompasses most of it.
-
-
-CLOSER LOOK AT EACH OF THE DIFFERENT TYPES
 
 Let's then take a look at the distribution of the groups(Violent, non violent and non criminal)
 -Violent
