@@ -287,42 +287,54 @@ The above figure shows that just below Tenderloin, on the edge of the Southern, 
 Although this visualisation shows other interesting insights on the tree distribution in specific areas. There is a clear pattern of 2 vertical streets full of trees in the lower left corner in Taraval. Those streets are *Sunset Boulevard* and the *Junipero Serra Boulevard*. Sunset Boulevard is famous of its [beautiful trees and bushes](https://www.sfparksalliance.org/our-parks/parks/sunset-blvd) along the road, which gives a great free time activity environment for runners, cyclists, families etc. The final section of the Junipero Serra Boulevard is also [aligned with trees](https://en.wikipedia.org/wiki/Junipero_Serra_Boulevard) quite densly, but that's only true for its final section, as we can read it from the picture as well.
 
 #### Crime dataset
-TODO
-- link to the data
-- short introduction
+- Link to dataset: https://data.sfgov.org/api/views/tmnf-yvry/rows.csv?accessType=DOWNLOAD
+- The San Fransisco crime dataset is foreign no noone who has done the Social Data Analysis and Visualization course at DTU, it contains geo and time tagged data of all police activty in San Fransico from the year 2003 and into 2018, we however cut the year 2018 from our analysis as data capture was halted before the year was complete. Please note that while the dataset is often discussed as a crime data set, it it truly a dataset of all police interactions. Where some of those interactions are indeed crimes, many are not, so we will refer to total sums as interactions.
 
 ##### Overview of data
-TODO
-- basic infos about the data
-  - number of rows, columns
-  - size
-  - date range
-  - mention why we skip data in 2018
-  - map of crimes?
+- Now that the content has been mentioned here are some stats about the memory size of the dataset
+  - The SF crime dataset totals to 538 MB, after cutting out 2018 the dataset contains 2084325 rows and 38 columns, containing all interactions from the 1st of January 2003 all the way t the 31st of December 2017, as mentioned before data collection was halted midway into 2018 so we cut that year out to do our analysis only on full years as many of our calculations are based on total numbers over the spanm of a whole year.
+
+  - map of crimes? TODO how the fuck do I include a map?
 
 ##### Fundamental aspects of the data
 Categories
-- number of crimes in the dataset
-- various types of crimes, how many are there
-- number of crimes in each category
-- most commonly occuring type of crime
-- least commonly occuring type of crime
+- In total we are looking at 1668476 unique police interactions containing 847 unique crime types, with the most common types interactions being:
+	- GRAND THEFT FROM LOCKED AUTO with 172505 occurances.
+	- LOST PROPERTY with 76466 occurances.
+	- BATTERY with 64927 occurances.TODO FOOTNOTE, WHAT DOES BATTERY MEAN(It is a subcategory of assault(find a source))
+	- STOLEN AUTOMOBILE with 63861 occurances.
+	- DRIVERS LICENSE, SUSPENDED OR REVOKED with 61903 occurances.
+- The least common interactions are then ________ with one occurance each.
+	-  
 - plot: bar plot over crime type occurences
 - define and explain groups: violent, non-violent, non-crime
+- Due to there being so many crime types we decided to narrow them down to three.
+	- Violent, containing all crimes where violence between 2 or more people took place.
+	- Non Violent, containing all crimes where no violence took place.
+	- Non Crime, containing all interactions where no illegal activity took place.
 - plot: heatmap of each group
 
-Crimes over the years
-- number of crimes per year
-- year with the least number of crimes
-- year with the most number of crimes
-- average number of crimes per year
-- plot: bar plot over average number of crimes per year by type and adding its standard deviation
-- define 'focus crimes'
-- plot: bar charts displaying the year-by-year development of each crime types in the range X-Y
-- comment on 3 interesting trends in the plot
 
-Crimes per area
-- which area has the most crimes (based on PDDistrict)
+Crimes over the years
+- number of crimes per year PLOT
+- From this graph we can see that most interactions took place during 2015 with 151459 interactions while 2011 had the fewest with 126713. With the average being 138955 or 380 interactions per day.
+- plot: bar plot over average number of crimes per year by type and adding its standard deviation
+- We then create a seperate dataframe conaining what we cann focus interactions, containing GRAND THEFT FROM LOCKED AUTO, LOST PROPERTY, BATTERY, STOLEN AUTOMOBILE, DRIVERS LICENSE, SUSPENDED OR REVOKED, AIDED CASE, MENTAL DISTURBED, WARRANT ARREST, SUSPICIOUS OCCURRENCE, PETTY THEFT FROM LOCKED AUTO, PETTY THEFT OF PROPERTY. Which are the 10 most common interactions, and took a closer look at those
+- plot: bar charts displaying the year-by-year development of each crime types in the range X-Y
+- plot: num and stdev of focus crimes
+- massive stdev in Grand theft from locked auto, from second graph we can see that that is due to a massive invrease in the last 4 years
+- dip in petty theft from locked auto in 2010 and 2011, why?
+- massive increase in Petty theft in 2010
+
+Crimes per area 
+REDO, WAS LOOKING AT WRONG MAPS, I NEED TO MAKE SOME MORE
+- plot crime_count_district
+- Most crimes in Taravel & Inleside, why? Size? Let't take a closer look
+- plot 100x100 squares
+- Very different pictures, Taravel and Inleside are very dark appart from 2 stripes that represent highways and a high number of traffic incidents
+- Taking a closer look at the downtown area where we would expect to see higher numbers but didn't in the first plot. Here we can see
+
+
 - discuss stereotypes of certain neighbourhoods and compare with results
 - plot: plot PDDistricts and color based on the number of crimes? (we have done it for vehicle thefts on Sundays in PDDistricts)
 
