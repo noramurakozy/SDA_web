@@ -1,7 +1,5 @@
 This webpage was created as an assignment for the [Social Data Analysis and Visualisation](https://kurser.dtu.dk/course/02806) course at DTU in 2022. The site presents our findings on the connection between tree density and crime occurences in San Francisco. Please find the repository of this GitHub page **[here](https://github.com/noramurakozy/SDA_web/tree/gh-pages)**.
 
-TODO: regenerate TOC when we're done
-
 ## Table of contents
 - [Introduction](#introduction)
   * [Motivation](#motivation)
@@ -17,32 +15,18 @@ TODO: regenerate TOC when we're done
 - [References](#references)
 
 ## Introduction
-This section introduces our motivation behind choosing this topic the describes the 2 datasets we're using in detail.
 
 ### Motivation
+TODO
+SF Urban Forest plan: https://sfplanning.org/urban-forest-plan
+- why this topic is interesting
+- how trees influence our lives
+- what do we want to investigate
+- what questions do we want to answer
 
-First, when we were looking for a dataset to work on and analyse in the 'green' topic, we all found it promising to have a look at trees and their influence on our lives. In addition, almost every city has its own maintained dataset of trees including their species, planting date and so on. During the research process we learned that trees have a great influence on people's lives and their environment. According to [this article](https://www.treesaregood.org/treeowner/benefitsoftrees), having trees in our everyday environment has the following benefits:
-- **Social benefits**
-	- Help people feel serene, peaceful, restful, and tranquil
-	- Reduce workplace stress and fatigue
-	- Decrease the recovery time following medical procedures
-	- *Lower the amount of criminal activity in a community*
-- **Communal benefits**
-	- Serve architectural and engineering functions by providing privacy, emphasizing views or obstructing objectionable views
-	- Reduce noise and glare
-	- Bring natural elements and wildlife habitats into urban surroundings
-- **Environmental benefits**
-	- Filter the air we breathe by removing dust and other particles
-	- Cool homes in the summer and allow the winter sun to heat homes when they lose their leaves4
-	- Serve as a windbreak
-
-and many more.
-
-In the social benefits category, we can see that the presence of trees can lower the criminal activity in an area. This fact was one of the inspirations of the proposed [urban forest plan](https://sfplanning.org/urban-forest-plan) in San Francisco. They list 'reduced crime rate' as one of the benefits of planting trees along the streets in the city. Two papers are also cited on the page to prove that trees really can have an influence on crime rate in a city [[1]](https://www.sciencedirect.com/science/article/abs/pii/S0169204612000977#:~:text=The%20more%20conservative%20spatially%20adjusted,roughly%2012%25%20decrease%20in%20crime.) [[2]](https://journals.sagepub.com/doi/abs/10.1177/0013916501333002#:~:text=Although%20vegetation%20has%20been%20positively,and%20less%20aggressive%20and%20violent). These studies were made based on data collected in other cities in the USA, but if planting trees worked in different settings, why not to try in San Francisco as well? Since, we haven't found any resource on the correlation between tree coverage and crime rate in San Francisco, we decided to investigate this topic and find out if it's worth planting more trees in order to turn San Francisco into a more peaceful city.
-
-This website guides the reader through the process of investigating the street tree and crime dataset of San Francisco and gives insights into the connection between density of trees in specific areas and the evolution of crimes in the same areas. The website serves as the main information source and tells the story of our project by including pictures, interactive maps and our observations for each small topic we investigated. The code and calculations can be found here if the reader wants to have a deeper look: **TODO link to the notebook**.
-
-TODO: delete when we're ready with the proofreading
+TODO
+- introduce the structure of the page
+- provide link to the notebook
 
 PLOTS HOWTO:
   - short introduction why do we show this plot
@@ -50,7 +34,9 @@ PLOTS HOWTO:
   - observations written under the plot
 
 ### Datasets
-This section describes the 2 datasets we were working with, starting with the street tree dataset in San Francisco. We provide the same statistics and insights to the dataset, so the reader can easily make a connectiong between the 2 datasets. Further analysis between the two can be found in [Section 2](#analysing-the-correlation-between-tree-density-and-crime-occurences).
+TODO
+- why did we choose SF data (https://sfplanning.org/urban-forest-plan)
+- link to the notebook
 
 #### Tree dataset
 The dataset is the list of maintained street trees in San Francisco including their planting date, species, and location. Please note, that the dataset is updated quite frequently, but since we access the data through the API of the OpenSF organization, our analysis remains up-to-date and shows the visualisations with the latest data. The data is openly accessible **[here](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)**.
@@ -215,7 +201,7 @@ We can see that most of the time the trees were scattered over the city. Althoug
 
 <iframe src="./maps/map_trees_animation.html" width="100%" height="500px"></iframe>
 
-> Figure 5: Interactive map movie of the planted trees between 1972 and 2022
+> Figure 5: Interactive map movie of the planted trees between 1972 and 2002
 
 By calculating the standard daviation of the number of trees over the years, we can observe the extent of the difference of number the planted trees compared to the average. As standard deviation is the quantity expressing how much the members of a group differ from the mean value for the group, we can conclude here, that for the trees in the *Arbutus Marina* species, the planted trees per year strongly differ from the mean of the yearly count. We can notice the same pattern in all the selected species, although in the case of *Ficus microcarpa nitida* it's not that significant. Figure 5 illustrates the average number of planted trees per year by species and their standard deviations as error bars. Due to the large selection of tree species (571 unique species in total), we decided to work with the most common species which were introduced earlier in Table 2, but listed here as well:
 
@@ -302,15 +288,14 @@ Although this visualisation shows other interesting insights on the tree distrib
 
 #### Crime dataset
 - Link to dataset: https://data.sfgov.org/api/views/tmnf-yvry/rows.csv?accessType=DOWNLOAD
-- The San Fransisco crime dataset is foreign no noone who has done the Social Data Analysis and Visualization course at DTU, it contains geo and time tagged data of all police activty in San Fransico from the year 2003 and into 2018, we however cut the year 2018 from our analysis as data capture was halted before the year was complete. Please note that while the dataset is often discussed as a crime data set, it it truly a dataset of all police interactions. Where some of those interactions are indeed crimes, many are not, so we will refer to total sums as interactions.
+The San Fransisco crime dataset is foreign no noone who has done the Social Data Analysis and Visualization course at DTU, it contains geo and time tagged data of all police activty in San Fransico from the year 2003 and into 2018, we however cut the year 2018 from our analysis as data capture was halted before the year was complete. Please note that while the dataset is often discussed as a crime data set, it it truly a dataset of all police interactions. Where some of those interactions are indeed crimes, many are not, so we will refer to total sums as interactions.
 
 ##### Overview of data
 - Now that the content has been mentioned here are some stats about the memory size of the dataset
   - The SF crime dataset totals to 538 MB, after cutting out 2018 the dataset contains 2084325 rows and 38 columns, containing all interactions from the 1st of January 2003 all the way t the 31st of December 2017, as mentioned before data collection was halted midway into 2018 so we cut that year out to do our analysis only on full years as many of our calculations are based on total numbers over the spanm of a whole year.
 
-  - map of crimes? TODO how the fuck do I include a map?
-  - like this: (it won't render in the preview in edit mode, but only will be visible on the website)
-  <iframe src="./maps/name_of_the_map.html" width="100%" height="500px"></iframe>
+  - map of crimes? TODO how the fuck do I include a map? FOUND IT
+  <iframe src="./maps/map_crimes_all.html" width="100%" height="500px"></iframe> # this map wont work since it is to large. Do a picture with a good resolution instead?
 
 ##### Fundamental aspects of the data
 Categories
@@ -320,39 +305,82 @@ Categories
 	- BATTERY with 64927 occurances.TODO FOOTNOTE, WHAT DOES BATTERY MEAN(It is a subcategory of assault(find a source))
 	- STOLEN AUTOMOBILE with 63861 occurances.
 	- DRIVERS LICENSE, SUSPENDED OR REVOKED with 61903 occurances.
-- The least common interactions are then ________ with one occurance each.
+- The least common interactions are then HAZARDOUS MATERIALS, STORE WITHOUT PERMIT, BURGLARY,HOTEL UNDER CONSTRUCTION, ATT. FORCIBLE, BIGAMY, INCEST, AND THE CRIME AGAINST NATURE (..., REFUSAL TO IDENTIFY, BOMBING OF POLICE BUILDING, CRIMES INVOLVING RECEIPTS OR TITLES, DISTURBANCE OF NON-RELIGIOUS, NON-POLITICAL AS, ROBBERY, VEHICLE FOR HIRE, ATT., W/ KNIFE, ACCIDENTAL LACERATIONS, SAFE BURGLARY OF A RESIDENCE WITH EXPLOSIVES, TRANSPORTATION OF OPIUM DERIVATIVE, PUBLIC UTILITY INFORMATION, FRAUDULENTLY OBTAI, PLANTING/CULTIVATING PEYOTE, SNIPER SCOPE, POSSESSION OF, HAZARDOUS MATERIALS, TRANSPORT WITHOUT PERMIT, ASSAULT TO ROB BANK WITH A GUN, ASSAULT TO ROB ON THE STREET W/DEADLY WEAPON, ASSAULT TO ROB WITH BODILY FORCE, ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ FUL, ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ SEM, VIOLATION OF CALIF UNEMPLOYMENT INSURANCE ACT, PERMIT VIOLATION, ADVERTISING HANDBILL DISTRIB, VETERAN OR EX-SERVICEMAN, FALSE REPRESENTATION AS, ATTEMPTED HOMICIDE BY SNIPING, TRANSPORTATION OF OPIUM, MERCHANDISE TITLE DOCUMENT FRAUD, FALSE REPRESENTATION TO SECONDHAND DEALER, UNSOLICITED FAX ADVERTISING, EMBEZZLEMENT, PETTY THEFT BY COLLECTOR. With one occurance each.
 	-  
-- plot: bar plot over crime type occurences
+- plot: bar plot over crime type occurences DONE
+<figure>
+  <img src="./images/crime_type_bar.png" alt="fig1" class="centeredImage">
+</figure>
+
 - define and explain groups: violent, non-violent, non-crime
-- Due to there being so many crime types we decided to narrow them down to three.
+- Due to there being so many crime types we decided to group them into three.
 	- Violent, containing all crimes where violence between 2 or more people took place.
 	- Non Violent, containing all crimes where no violence took place.
 	- Non Crime, containing all interactions where no illegal activity took place.
-- plot: heatmap of each group
+
+insert heatmaps of
 
 
 Crimes over the years
 - number of crimes per year PLOT
+<figure>
+  <img src="./images/crimes_per_month_bar.png" alt="fig1" class="centeredImage">
+</figure>
 - From this graph we can see that most interactions took place during 2015 with 151459 interactions while 2011 had the fewest with 126713. With the average being 138955 or 380 interactions per day.
 - plot: bar plot over average number of crimes per year by type and adding its standard deviation
 - We then create a seperate dataframe conaining what we cann focus interactions, containing GRAND THEFT FROM LOCKED AUTO, LOST PROPERTY, BATTERY, STOLEN AUTOMOBILE, DRIVERS LICENSE, SUSPENDED OR REVOKED, AIDED CASE, MENTAL DISTURBED, WARRANT ARREST, SUSPICIOUS OCCURRENCE, PETTY THEFT FROM LOCKED AUTO, PETTY THEFT OF PROPERTY. Which are the 10 most common interactions, and took a closer look at those
 - plot: bar charts displaying the year-by-year development of each crime types in the range X-Y
+<figure>
+  <img src="./images/type_yearly_dev_bar.png" alt="fig1" class="centeredImage">
+</figure>
+<figure>
+  <img src="./images/type_avg_per_year_std_bar.png" alt="fig1" class="centeredImage">
+</figure>
 - plot: num and stdev of focus crimes
 - massive stdev in Grand theft from locked auto, from second graph we can see that that is due to a massive invrease in the last 4 years
 - dip in petty theft from locked auto in 2010 and 2011, why?
 - massive increase in Petty theft in 2010
 
+
 Crimes per area 
 REDO, WAS LOOKING AT WRONG MAPS, I NEED TO MAKE SOME MORE
-- plot crime_count_district
-- Most crimes in Taravel & Inleside, why? Size? Let't take a closer look
-- plot 100x100 squares
-- Very different pictures, Taravel and Inleside are very dark appart from 2 stripes that represent highways and a high number of traffic incidents
-- Taking a closer look at the downtown area where we would expect to see higher numbers but didn't in the first plot. Here we can see
+<iframe src="./maps/crime_all_count_district.html" width="100%" height="500px"></iframe>
+- Most crimes in Southern, why? Since it is the downtown area we would expect there to be more crimes here but this is the biggest area of the ones that make up the downtown area so does it have the biggest number due to it's size? Let't take a closer look at the density
+
+<figure>
+  <img src="./images/crime_density_100x100.png" alt="fig1" class="centeredImage">
+</figure>
+
+- Here we can see the density of interactions in 100x100m blocks around SF, we cannot see much from this picture so let's make the resolution finer and have another look.
+
+<figure>
+  <img src="./images/crime_density_50x50.png" alt="fig1" class="centeredImage">
+</figure>
+- Now we can see more detail, we can also see that there is a large cluster that is encompassed by all the central sectors and Southern simply encompasses most of it.
 
 
-- discuss stereotypes of certain neighbourhoods and compare with results
-- plot: plot PDDistricts and color based on the number of crimes? (we have done it for vehicle thefts on Sundays in PDDistricts)
+CLOSER LOOK AT EACH OF THE DIFFERENT TYPES
+
+Let's then take a look at the distribution of the groups(Violent, non violent and non criminal)
+-Violent
+<figure>
+  <img src="./images/iolent_density_100x100.png" alt="fig1" class="centeredImage">
+</figure>
+-As we expect, when taking a look at the violent crimes we can see that they follow the distribution of the overall dataset quite closely with the major change being that the suburbs aren't as bright while the centeral area is even brighter.
+
+- Next taking a look at non violent crimes
+<figure>
+  <img src="./images/nonViolent_density_100x100.png" alt="fig1" class="centeredImage">
+</figure>
+-Again we can see a cluster in the downtown are but the overall graph is far darker than the previous one, so whule overall there are far fewer non violent crimes in the wider SF area, the central districts maintain a high number.
+
+- Finally the non crimes
+ <figure>
+  <img src="./images/nonCrime_density_100x100.png" alt="fig1" class="centeredImage">
+</figure>
+- Surprisingly this plot tracks the non violent one very closely. We would not be surprised if these last 2 graphs track the overall population distribution of people in SF with economic factors pushing the people who live in the downtown are to more violent activities.
+
+
 
 ## Analysing the correlation between tree density and crime occurences
 - what are we expecting
