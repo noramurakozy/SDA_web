@@ -308,7 +308,7 @@ The San Fransisco crime dataset is foreign no noone who has done the Social Data
   - The SF crime dataset totals to 538 MB, after cutting out 2018 the dataset contains 2084325 rows and 38 columns, containing all interactions from the 1st of January 2003 all the way t the 31st of December 2017, as mentioned before data collection was halted midway into 2018 so we cut that year out to do our analysis only on full years as many of our calculations are based on total numbers over the spanm of a whole year.
 
 
-Here we can see the GPS loication of each interaction in the dataset
+Here we can see the GPS location of each interaction in the dataset
 <figure>
   <img src="./images/map_crimes_all.jpg" alt="fig4" class="centeredImage" style="width:100%">
 </figure>
@@ -355,37 +355,38 @@ Interactions over the years
 
 Crimes per area 
 <iframe src="./maps/crime_all_count_district.html" width="100%" height="500px"></iframe>
-- Most crimes in Southern, why? Since it is the downtown area we would expect there to be more crimes here but this is the biggest area of the ones that make up the downtown area so does it have the biggest number due to it's size? Let't take a closer look at the density
+- Most crimes in Southern, why? 
+	- Since it is the downtown area we would expect there to be more crimes here but this is the biggest area of the ones that make up the downtown area so does it have the biggest number due to it's size? Let't take a closer look at the density
 
 <figure>
-  <img src="./images/crime_density_100x100.png" alt="fig1" class="centeredImage">
+  <img src="./images/crime_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
 
 - Here we can see the density of interactions in 100x100m blocks around SF, we cannot see much from this picture so let's make the resolution finer and have another look.
 
 <figure>
-  <img src="./images/crime_density_50x50.png" alt="fig1" class="centeredImage">
+  <img src="./images/crime_density_50x50.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
 - Now we can see more detail, we can also see that there is a large cluster that is encompassed by all the central sectors and Southern simply encompasses most of it.
 
 Let's then take a look at the distribution of the groups(Violent, non violent and non criminal)
--Violent
+- Violent
 <figure>
-  <img src="./images/iolent_density_100x100.png" alt="fig1" class="centeredImage">
+  <img src="./images/violent_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
--As we expect, when taking a look at the violent crimes we can see that they follow the distribution of the overall dataset quite closely with the major change being that the suburbs aren't as bright while the centeral area is even brighter.
+	- As we expect, when taking a look at the violent crimes we can see that they follow the distribution of the overall dataset quite closely with the major change being that the suburbs aren't as bright while the centeral area is even brighter.
 
 - Next taking a look at non violent crimes
 <figure>
-  <img src="./images/nonViolent_density_100x100.png" alt="fig1" class="centeredImage">
+  <img src="./images/nonViolent_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
--Again we can see a cluster in the downtown are but the overall graph is far darker than the previous one, so whule overall there are far fewer non violent crimes in the wider SF area, the central districts maintain a high number.
+	- Again we can see a cluster in the downtown are but the overall graph is far darker than the previous one, so whule overall there are far fewer non violent crimes in the wider SF area, the central districts maintain a high number.
 
 - Finally the non crimes
  <figure>
-  <img src="./images/nonCrime_density_100x100.png" alt="fig1" class="centeredImage">
+  <img src="./images/nonCrime_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
-- Surprisingly this plot tracks the non violent one very closely. We would not be surprised if these last 2 graphs track the overall population distribution of people in SF with economic factors pushing the people who live in the downtown are to more violent activities.
+	- Surprisingly this plot tracks the non violent one very closely. We would not be surprised if these last 2 graphs track the overall population distribution of people in SF with economic factors pushing the people who live in the downtown are to more violent activities.
 
 
 
