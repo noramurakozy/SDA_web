@@ -90,7 +90,7 @@ The following interactive map shows the location of the registered trees from th
 
 As the map shows, most of the trees are located on the east side of San Francisco, the density is a bit lower on the west side and data is missing in the public parks, probably because they are maintained and registered by an organization other than [The City Department of Public Works (DPW)](https://sfpublicworks.org/).
 
-##### Fundamental aspects of the data
+##### Exploratory analysis
 This section gives a deeper insight to the dataset by analysing the trees by species, years and areas.
 
 **Species**
@@ -272,15 +272,12 @@ The IsolationForest ‘isolates’ observations by randomly selecting a feature 
 
 > Figure 9: Outliers in number of trees planted calculated with the IsolationForest algorithm
 
-The algorithm found 11 anomalies, but interestingly, these dates are different from the other 11 outliers found by the rolling method. The only matching date for outliers is *2000-06-01*.
+The algorithm found 11 anomalies, but interestingly, these dates are different from the other 11 outliers found by the rolling method. The only matching month for outliers is *2000-06*.
 
-These were the dates found by the rolling calculations: `1979-04-01`, `1980-04-01`, `1982-04-01`, `1985-10-01`, `1992-05-01`, **`2000-06-01`**, `2005-12-01`, `2006-03-01`, `2014-12-01`, `2015-01-01`, `2017-10-01`
-And by the IsolationForest: `1996-11-01`, `1998-05-01`, `1998-06-01`, **`2000-06-01`**, `2000-07-01`, `2002-05-01`, `2007-03-01`, `2008-02-01`, `2008-06-01`, `2008-07-01`, `2009-07-01`.
+These were the months found by the rolling calculations: `1979-04`, `1980-04`, `1982-04`, `1985-10`, `1992-05`, **`2000-06`**, `2005-12`, `2006-03`, `2014-12`, `2015-01`, `2017-10`
+And by the IsolationForest: `1996-11`, `1998-05`, `1998-06`, **`2000-06`**, `2000-07`, `2002-05`, `2007-03`, `2008-02`, `2008-06`, `2008-07`, `2009-07`.
 
-TODO: delete, we messed up the calculation
-```As you can see, all the outlier dates are the first day of a month. That means, that probably this is an error in the data, that was caused by humans and people who registered the trees were setting the date to the first day of the month. Another reason could be that most of the times they planted trees on the first day of the month, in that case it's not an error.```
-
-```In addition, we tried to find resources on what happened on the highlighted day (01/06/2000), but we haven't found any articles that would support that a huge tree planting day happened that day, so we just conclude that that day, exceptionally many trees were planted.```
+We tried to find resources on what happened in the highlighted month (June 2000), but we haven't found any articles that would support that a huge tree planting activity happened in that month, so we just conclude that in that month, exceptionally many trees were planted.
 
 **Trees per area**
 
