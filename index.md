@@ -1,5 +1,7 @@
 This webpage was created as an assignment for the [Social Data Analysis and Visualisation](https://kurser.dtu.dk/course/02806) course at DTU in 2022. The site presents our findings on the connection between tree density and crime occurences in San Francisco. Please find the repository of this GitHub page **[here](https://github.com/noramurakozy/SDA_web/tree/gh-pages)**.
 
+TODO: regenerate TOC when we're done
+
 ## Table of contents
 - [Introduction](#introduction)
   * [Motivation](#motivation)
@@ -15,28 +17,39 @@ This webpage was created as an assignment for the [Social Data Analysis and Visu
 - [References](#references)
 
 ## Introduction
+This section introduces our motivation behind choosing this topic the describes the 2 datasets we're using in detail.
 
 ### Motivation
-TODO
-SF Urban Forest plan: https://sfplanning.org/urban-forest-plan
-- why this topic is interesting
-- how trees influence our lives
-- what do we want to investigate
-- what questions do we want to answer
 
-TODO
-- introduce the structure of the page
-- provide link to the notebook
+First, when we were looking for a dataset to work on and analyse in the 'green' topic, we all found it promising to have a look at trees and their influence on our lives. In addition, almost every city has its own maintained dataset of trees including their species, planting date and so on. During the research process we learned that trees have a great influence on people's lives and their environment. According to [this article](https://www.treesaregood.org/treeowner/benefitsoftrees), having trees in our everyday environment has the following benefits:
+- **Social benefits**
+	- Help people feel serene, peaceful, restful, and tranquil
+	- Reduce workplace stress and fatigue
+	- Decrease the recovery time following medical procedures
+	- *Lower the amount of criminal activity in a community*
+- **Communal benefits**
+	- Serve architectural and engineering functions by providing privacy, emphasizing views or obstructing objectionable views
+	- Reduce noise and glare
+	- Bring natural elements and wildlife habitats into urban surroundings
+- **Environmental benefits**
+	- Filter the air we breathe by removing dust and other particles
+	- Cool homes in the summer and allow the winter sun to heat homes when they lose their leaves4
+	- Serve as a windbreak
 
+and many more.
+
+In the social benefits category, we can see that the presence of trees can lower the criminal activity in an area. This fact was one of the inspirations of the proposed [urban forest plan](https://sfplanning.org/urban-forest-plan) in San Francisco. They list 'reduced crime rate' as one of the benefits of planting trees along the streets in the city. Two papers are also cited on the page to prove that trees really can have an influence on crime rate in a city. These studies were made based on data collected in other cities in the USA, but if planting trees worked in different settings, why not to try in San Francisco as well? Since, we haven't found any resource on the correlation between tree coverage and crime rate in San Francisco, we decided to investigate this topic and find out if it's worth planting more trees in order to turn San Francisco into a more peaceful city.
+
+This website guides the reader through the process of investigating the street tree and crime dataset of San Francisco and gives insights into the connection between density of trees in specific areas and the evolution of crimes in the same areas. The website serves as the main information source and tells the story of our project by including pictures, interactive maps and our observations for each small topic we investigated. The code and calculations can be found here if the reader wants to have a deeper look: **TODO link to the notebook**.
+
+TODO: delete when we're ready with the proofreading
 PLOTS HOWTO:
   - short introduction why do we show this plot
   - title, axes, colors, labels, ticks, caption
   - observations written under the plot
 
 ### Datasets
-TODO
-- why did we choose SF data (https://sfplanning.org/urban-forest-plan)
-- link to the notebook
+This section describes the 2 datasets we were working with, starting with the street tree dataset in San Francisco. We provide the same statistics and insights to the dataset, so the reader can easily make a connectiong between the 2 datasets. Further analysis between the two can be found in [Section 2](#analysing-the-correlation-between-tree-density-and-crime-occurences).
 
 #### Tree dataset
 The dataset is the list of maintained street trees in San Francisco including their planting date, species, and location. Please note, that the dataset is updated quite frequently, but since we access the data through the API of the OpenSF organization, our analysis remains up-to-date and shows the visualisations with the latest data. The data is openly accessible **[here](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)**.
