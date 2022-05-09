@@ -331,7 +331,7 @@ Here we can see how the most common interactions compaire with each other
 </figure>
 
 - Due to there being so many crime types we decided to group them into three.
-	- Violent, containing all crimes where violence between 2 or more people took place.
+	- Violent, containing all crimes where violence took place.
 	- Non Violent, containing all crimes where no violence took place.
 	- Non Crime, containing all interactions where no illegal activity took place.
 
@@ -359,13 +359,13 @@ Crimes per area
 	- Since it is the downtown area we would expect there to be more crimes here but this is the biggest area of the ones that make up the downtown area so does it have the biggest number due to it's size? Let't take a closer look at the density
 
 <figure>
-  <img src="./images/crime_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
+  <img src="./images/crime_density_100x100.png" alt="fig1" class="centeredImage" style="width:80%">
 </figure>
 
 - Here we can see the density of interactions in 100x100m blocks around SF, we cannot see much from this picture so let's make the resolution finer and have another look.
 
 <figure>
-  <img src="./images/crime_density_50x50.png" alt="fig1" class="centeredImage" style="width:100%">
+  <img src="./images/crime_density_50x50.png" alt="fig1" class="centeredImage" style="width:80%">
 </figure>
 - Now we can see more detail, we can also see that there is a large cluster that is encompassed by all the central sectors and Southern simply encompasses most of it.
 
@@ -376,7 +376,7 @@ Let's then take a look at the distribution of the groups(Violent, non violent an
 	
 	
 <figure>
-  <img src="./images/violent_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
+  <img src="./images/violent_density_100x100.png" alt="fig1" class="centeredImage" style="width:80%">
 </figure>
 
 
@@ -384,13 +384,13 @@ Let's then take a look at the distribution of the groups(Violent, non violent an
 	- Again we can see a cluster in the downtown are but the overall graph is far darker than the previous one, so while overall there are far fewer non violent crimes in the wider SF area, the central districts maintain a high number.
 
 <figure>
-  <img src="./images/nonViolent_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
+  <img src="./images/nonViolent_density_100x100.png" alt="fig1" class="centeredImage" style="width:80%">
 </figure>
 
 - Finally the non crimes
-	- Surprisingly this plot tracks the non violent one very closely. We would not be surprised if these last 2 graphs track the overall population distribution of people in SF with economic factors pushing the people who live in the downtown are to more violent activities.
+	- Surprisingly this plot tracks the non violent one very closely. We would not be surprised if these last 2 graphs track the overall population distribution of people in SF with economic factors pushing the people who live in the downtown area to more violent activities.
  <figure>
-  <img src="./images/nonCrime_density_100x100.png" alt="fig1" class="centeredImage" style="width:100%">
+  <img src="./images/nonCrime_density_100x100.png" alt="fig1" class="centeredImage" style="width:80%">
 </figure>
 
 
