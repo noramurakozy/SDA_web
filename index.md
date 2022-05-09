@@ -277,7 +277,10 @@ The algorithm found 11 anomalies, but interestingly, these dates are different f
 These were the dates found by the rolling calculations: `1979-04-01`, `1980-04-01`, `1982-04-01`, `1985-10-01`, `1992-05-01`, **`2000-06-01`**, `2005-12-01`, `2006-03-01`, `2014-12-01`, `2015-01-01`, `2017-10-01`
 And by the IsolationForest: `1996-11-01`, `1998-05-01`, `1998-06-01`, **`2000-06-01`**, `2000-07-01`, `2002-05-01`, `2007-03-01`, `2008-02-01`, `2008-06-01`, `2008-07-01`, `2009-07-01`.
 
-**TODO: found an article what happened on 2000-06-01**
+TODO: delete, we messed up the calculation
+```As you can see, all the outlier dates are the first day of a month. That means, that probably this is an error in the data, that was caused by humans and people who registered the trees were setting the date to the first day of the month. Another reason could be that most of the times they planted trees on the first day of the month, in that case it's not an error.```
+
+```In addition, we tried to find resources on what happened on the highlighted day (01/06/2000), but we haven't found any articles that would support that a huge tree planting day happened that day, so we just conclude that that day, exceptionally many trees were planted.```
 
 **Trees per area**
 
@@ -394,46 +397,32 @@ Let's then take a look at the distribution of the groups(Violent, non violent an
 </figure>
 
 
-
-
 ## Analysing the correlation between tree density and crime occurences
-During the analysis, we expect to get the same results as we have read in the papers written about the connection between trees and crime rate in an area. We expect to find results that can support the hypothesis, according to which, the more trees are planted the less crime incidents happen in a city. To find out, we calculate the correlation between tree density and crimes by investigating specific areas, also, we build a machine learning model that tries to predict the number of crimes in a month based on the number of planted trees. We also predict the number of crimes per area based on the amount of trees planted.
+During the analysis, we expect to get the same results as we have read in the papers written about the connection between trees and crime rate in an area. We expect to find results that can support the hypothesis, according to which, the more trees are planted the less crime incidents happen in a city. To find out, we calculate the correlation between tree density and crimes by investigating specific areas using linear regression.
 
-### Correlation per area
-#### The city as a whole
+### Correlation per area - Feri
+TODO: why we do this
+#### The city as a whole - Feri
 - connection between number of trees and number of crimes in general? (in 100mx100x areas on heatmap)
-    - plot: heatmap of crimes
-    - plot: heatmap of trees
+    - plot: correlation heatmap
     - calculate correlation
     - draw conclusion
-#### Per district
-- is there a district where the more trees are the less crimes happen and vica versa?
-    - plot: heatmap of crimes per pddistrict
-    - plot: heatmap of trees per pddistrict
-    - calculate correlation for each area
-    - draw conclusion
-### Correlation in time
+### Correlation in time - Feri
 - is there a drop in crimes as trees are planted over time?
     - animation of planting trees over the year + crimes in the same animation with different color?
     - make observations
     - support observations with calculations and data
-### Correlation in crime type and tree species (maybe not?)
-todo, I don't know how (yet)
 
-### Machine learning
-#### Nr. of crimes in a month based on nr. of trees planted
+### Linear regression - Feri
+TODO: why we do this
+#### Nr. of crimes in a month based on nr. of trees planted - Feri
 - prediction of number of crimes in a month if X number of trees are planted
     - linear regression
-#### Nr. of crimes (in an area) based on nr. of trees planted of a specific species
-- prediction of number of crimes if X number of trees are planted of a specific species
-    - linear regression
-#### Nr. of crimes in a Police District based on nr. of trees planted (maybe not?)
+#### Nr. of crimes in a Police District based on nr. of trees planted - Feri
 - prediction of number of crimes in a district if X number of trees are planted
     - linear regression
 
-## Conclusion
+## Conclusion - Nora
 - write conclusion of findings
 - what could have we done better
 - mention any areas with missing data (e.g. the park where no trees are listed in the dataset (because those are not street trees?))
-
-## References
