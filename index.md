@@ -300,99 +300,208 @@ The above figure shows that just below Tenderloin, on the edge of the Southern, 
 Although this visualisation shows other interesting insights on the tree distribution in specific areas. There is a clear pattern of 2 vertical streets full of trees in the lower left corner in Taraval. Those streets are *Sunset Boulevard* and the *Junipero Serra Boulevard*. Sunset Boulevard is famous of its [beautiful trees and bushes](https://www.sfparksalliance.org/our-parks/parks/sunset-blvd) along the road, which gives a great free time activity environment for runners, cyclists, families etc. The final section of the Junipero Serra Boulevard is also [aligned with trees](https://en.wikipedia.org/wiki/Junipero_Serra_Boulevard) quite densly, but that's only true for its final section, as we can read it from the picture as well.
 
 #### Crime dataset
-- Link to dataset: https://data.sfgov.org/api/views/tmnf-yvry/rows.csv?accessType=DOWNLOAD
-The San Fransisco crime dataset is foreign no noone who has done the Social Data Analysis and Visualization course at DTU, it contains geo and time tagged data of all police activty in San Fransico from the year 2003 and into 2018, we however cut the year 2018 from our analysis as data capture was halted before the year was complete. Please note that while the dataset is often discussed as a crime data set, it it truly a dataset of all police interactions. Where some of those interactions are indeed crimes, many are not, so we will refer to total sums as interactions.
+The San Fransisco crime dataset is foreign to noone who has done the Social Data Analysis and Visualization course at DTU, it contains geo and time tagged data of all police activty in San Fransico from the year 2003 and into 2018, we however cut the year 2018 from our analysis as data capture was halted before the year was complete. Please note that while the dataset is often discussed as a crime data set, it it truly a dataset of all police interactions. Where some of those interactions are indeed crimes, many are not, so we will refer to total sums as interactions. [Link to dataset](https://data.sfgov.org/api/views/tmnf-yvry/rows.csv?accessType=DOWNLOAD)
 
 ##### Overview of data
-- Now that the content has been mentioned here are some stats about the memory size of the dataset
-  - The SF crime dataset totals to 538 MB, after cutting out 2018 the dataset contains 2084325 rows and 38 columns, containing all interactions from the 1st of January 2003 all the way t the 31st of December 2017, as mentioned before data collection was halted midway into 2018 so we cut that year out to do our analysis only on full years as many of our calculations are based on total numbers over the spanm of a whole year.
+Now that the content has been mentioned here are some stats about the memory size of the dataset: 
+  - The SF crime dataset totals to `538 MB`, after cutting out 2018 and filtering for `focus crimes` the dataset contains `1214682 rows` and `38 columns`, containing all interactions from the `1st of January 2003` all the way to the `31st of December 2017`, as mentioned before data collection was halted midway into 2018 so we cut that year out to do our analysis only on full years as many of our calculations are based on total numbers over the span of a whole year. Also, we introduced the following focus crimes to be able to work on a smaller dataset which is easier to handle:
 
+```focuscrimes = set(['WEAPON LAWS', 'PROSTITUTION', 'DRIVING UNDER THE INFLUENCE', 'ROBBERY', 'BURGLARY', 'ASSAULT', 'DRUNKENNESS', 'DRUG/NARCOTIC', 'TRESPASS', 'LARCENY/THEFT', 'VANDALISM', 'VEHICLE THEFT', 'STOLEN PROPERTY', 'DISORDERLY CONDUCT'])```
 
-Here we can see the GPS location of each interaction in the dataset
-<figure>
-  <img src="./images/map_crimes_all.jpg" alt="fig4" class="centeredImage" style="width:100%">
-</figure>
+##### Exploratory analysis
+Here we conduct an exploratory analysis on the crime dataset, so we can get more insights and get familiar with the data. This section gives a deeper insight to the dataset by analysing the crimes by category, years and areas.
 
-##### Fundamental aspects of the data
-Categories
-- In total we are looking at 1668476 unique police interactions containing 847 unique crime types, with the most common types interactions being:
-	- GRAND THEFT FROM LOCKED AUTO with 172505 occurances.
-	- LOST PROPERTY with 76466 occurances.
-	- BATTERY with 64927 occurances.TODO FOOTNOTE, WHAT DOES BATTERY MEAN(It is a subcategory of assault(find a source))
-	- STOLEN AUTOMOBILE with 63861 occurances.
-	- DRIVERS LICENSE, SUSPENDED OR REVOKED with 61903 occurances.
-- The least common interactions are then 
-	- HAZARDOUS MATERIALS, STORE WITHOUT PERMIT, BURGLARY,HOTEL UNDER CONSTRUCTION, ATT. FORCIBLE, BIGAMY, INCEST, AND THE CRIME AGAINST NATURE (..., REFUSAL TO IDENTIFY, BOMBING OF POLICE BUILDING, CRIMES INVOLVING RECEIPTS OR TITLES, DISTURBANCE OF NON-RELIGIOUS, NON-POLITICAL AS, ROBBERY, VEHICLE FOR HIRE, ATT., W/ KNIFE, ACCIDENTAL LACERATIONS, SAFE BURGLARY OF A RESIDENCE WITH EXPLOSIVES, TRANSPORTATION OF OPIUM DERIVATIVE, PUBLIC UTILITY INFORMATION, FRAUDULENTLY OBTAI, PLANTING/CULTIVATING PEYOTE, SNIPER SCOPE, POSSESSION OF, HAZARDOUS MATERIALS, TRANSPORT WITHOUT PERMIT, ASSAULT TO ROB BANK WITH A GUN, ASSAULT TO ROB ON THE STREET W/DEADLY WEAPON, ASSAULT TO ROB WITH BODILY FORCE, ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ FUL, ASSAULT, AGGRAVATED, ON POLICE OFFICER, W/ SEM, VIOLATION OF CALIF UNEMPLOYMENT INSURANCE ACT, PERMIT VIOLATION, ADVERTISING HANDBILL DISTRIB, VETERAN OR EX-SERVICEMAN, FALSE REPRESENTATION AS, ATTEMPTED HOMICIDE BY SNIPING, TRANSPORTATION OF OPIUM, MERCHANDISE TITLE DOCUMENT FRAUD, FALSE REPRESENTATION TO SECONDHAND DEALER, UNSOLICITED FAX ADVERTISING, EMBEZZLEMENT, PETTY THEFT BY COLLECTOR. 
-- With one occurance each.
-	-  
-Here we can see how the most common interactions compaire with each other
+**Categories**
+
+- In total we are looking at **1064315 unique crimes** containing **14 unique crime types** (as it's filtered down), with the 5 most common types interactions being:
+	- `LARCENY/THEFT` with 464337 occurances.
+	- `ASSAULT` with 163151 occurances.
+	- `VEHICLE THEFT` with 124744 occurances.
+	- `DRUG/NARCOTIC` with 116345 occurances.
+	- `VANDALISM` with 111932 occurances.
+ 
+The next figure shows the 10 most common categories and their occurences on a bar plot. The plot shows that the **most common** crime category in San Francisco is *LARCENY/THEFT* with *464337* occurences. On the other hand, *PROSTITUTION* has the least amount of occurences, around 100000.
+
 <figure>
   <img src="./images/crime_type_bar.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
 
-- Due to there being so many crime types we decided to group them into three.
-	- Violent, containing all crimes where violence took place.
-	- Non Violent, containing all crimes where no violence took place.
-	- Non Crime, containing all interactions where no illegal activity took place.
+> Figure 12: Most common crimes and occurences in San Francisco
 
+The following table and maps show the location of these crimes across San Francisco.
 
-Interactions over the years
-- Here we can see how the number of interactions has changed ofter the years.
+<table>
+	<tbody>
+		<tr>
+			<td><b>Category name</b></td>
+			<td><b>Number of crimes</b></td>
+			<td><b>Map</b></td>
+		</tr>
+		<tr>
+			<td>LARCENY/THEFT</td>
+			<td>464337</td>
+			<td><iframe src="./maps/map_crime_1.html" width="450px" height="400px"></iframe></td>
+		</tr>
+		<tr>
+			<td>ASSAULT</td>
+			<td>163151</td>
+			<td><iframe src="./maps/map_crime_2.html" width="450px" height="400px"></iframe></td>
+		</tr>
+		<tr>
+			<td>VEHICLE THEFT</td>
+			<td>124744</td>
+			<td><iframe src="./maps/map_crime_3.html" width="450px" height="400px"></iframe></td>
+		</tr>
+		<tr>
+			<td>DRUG/NARCOTIC</td>
+			<td>116345</td>
+			<td><iframe src="./maps/map_crime_4.html" width="450px" height="400px"></iframe></td>
+		</tr>
+		<tr>
+			<td>VANDALISM</td>
+			<td>111932</td>
+			<td><iframe src="./maps/map_crime_5.html" width="450px" height="400px"></iframe></td>
+		</tr>
+		<tr>
+			<td>BURGLARY</td>
+			<td>88970</td>
+			<td><iframe src="./maps/map_crime_6.html" width="450px" height="400px"></iframe></td>
+		</tr>
+		<tr>
+			<td>ROBBERY</td>
+			<td>53414</td>
+			<td><iframe src="./maps/map_crime_7.html" width="450px" height="400px"></iframe></td>
+		</tr>
+		<tr>
+			<td>WEAPON LAWS</td>
+			<td>20396</td>
+			<td><iframe src="./maps/map_crime_8.html" width="450px" height="400px"></iframe></td>
+		</tr>
+		<tr>
+			<td>TRESPASS</td>
+			<td>18679</td>
+			<td><iframe src="./maps/map_crime_9.html" width="450px" height="400px"></iframe></td>
+		</tr>
+		<tr>
+			<td>PROSTITUTION</td>
+			<td>16451</td>
+			<td><iframe src="./maps/map_crime_10.html" width="450px" height="400px"></iframe></td>
+		</tr>
+	</tbody>
+</table>
+
+> Table 3: The occurences of the most common crime categories in San Francisco and their location on interactive maps
+
+**Crimes over the years**
+In this section we analyse the crime rate development in the city, we're interested in any peaks and valleys in the investigated time period.
+
+The figure shows the number of crimes in each year in San Francisco. Most of the crimes happened in 2017 with around 90000 incidents. In 2011 only ~70000 crimes happened, which is the lowest amount in the registered time period.
+
 <figure>
-  <img src="./images/crimes_per_month_bar.png" alt="fig1" class="centeredImage" style="width:100%">
+  <img src="./images/crimes_per_year_bar.png" alt="fig1" class="centeredImage" style="width:100%">
 </figure>
-- From this graph we can see that most interactions took place during 2015 with 151459 interactions while 2011 had the fewest with 126713. With the average being 138955 or 380 interactions per day.
-- We then create a seperate dataframe conaining what we cann focus interactions, containing GRAND THEFT FROM LOCKED AUTO, LOST PROPERTY, BATTERY, STOLEN AUTOMOBILE, DRIVERS LICENSE, SUSPENDED OR REVOKED, AIDED CASE, MENTAL DISTURBED, WARRANT ARREST, SUSPICIOUS OCCURRENCE, PETTY THEFT FROM LOCKED AUTO, PETTY THEFT OF PROPERTY. Which are the 10 most common interactions, and took a closer look at those
-<figure>
-  <img src="./images/type_yearly_dev_bar.png" alt="fig1" class="centeredImage" style="width:100%">
-</figure>
-<figure>
-  <img src="./images/type_avg_per_year_std_bar.png" alt="fig1" class="centeredImage" style="width:100%">
-</figure>
-- From the second graph we can see that there is a massive standard deviation in Grand theft from locked auto, this is due to the massive increase in the last 4 years of datacollection as can be seen in the first graph.
-- There is then a massive drop in Petty theft from locked auto in 2010 and 2011 and a massive increase in normal petty theft at the same time. This might be due to something like a police clampdown on auto theft that then lost steam, or a lack of reporting.
 
+> Figure 13: Number of crimes in each year in San Francisco
 
-Crimes per area 
-<iframe src="./maps/crime_all_count_district.html" width="100%" height="500px"></iframe>
-- Most crimes in Southern, why? 
-	- Since it is the downtown area we would expect there to be more crimes here but this is the biggest area of the ones that make up the downtown area so does it have the biggest number due to it's size? Let't take a closer look at the density
+To mention exact numbers, in `2017` `92696` crime incidents occured, which is the hightest amount in the registered time period, while in `2011` `68910` crime incidents occured, which is the lowest amount in the registered time period. On average, `80978` crimes occured `yearly`, `6748 crimes occured monthly` and `221 occured daily`.
+
+To further look at the changes over the years, we created a movie which is a good representation of the crimes occured over the years. The movie shows the crimes in each year between 2011 and 2017. We decided to examine this year range, because we can see a gradual increase starting from the year of 2011. Also, we decided to only investigate the `LARCENY/THEFT` category as the most common type of crime, because that would show a great trend of the changes in the crime categories.
+
+<iframe src="./maps/map_crimes_animation.html" width="100%" height="500px"></iframe>
+
+> Figure 14: Interactive movie of the yearly distribution of larceny/theft type of crimes in the years between 2011 and 2017
+
+As we can read from the moview, the most common area of the investigated crime basically remaines the same - north-west section of the city - over the years, but the location of the incidents at the least frequented places changes from year to year.
+
+To further examine the data, we calculate the standard daviation of the number of crimes over the years, so we can observe the extent of the difference of the number of crime incidents compared to the average.
+
+<figure>
+  <img src="./images/crime_category_avg_per_year_std_bar.png" alt="fig1" class="centeredImage" style="width:100%">
+</figure>
+
+> Figure 15: Average number of crimes per year and their standard deviation as error bars
+
+As standard deviation is the quantity expressing how much the members of a group differ from the mean value for the group, we can conclude here, that for the crimes in the *LARCENY/THEFT* category, the crime occurences per year somewhat differ from the mean of the yearly count. We can notice the same pattern in category *VEHICLE/THEFT* and *DRUG/NARCOTIC*, although in the rest of the cases the difference is not that significant.
+
+Another interesting area to investigate is the year-by-year development of the crime categories.
+
+<figure>
+  <img src="./images/crime_type_yearly_dev_bar.png" alt="fig1" class="centeredImage" style="width:100%">
+</figure>
+
+> Figure 16: Yearly development of crime occurences per crime category
+
+Out of the 10 most common crime categories, 5 follows a similar trend and stays at a high number in each year. Although there are some categories we can highlight and investigate more:
+
+* *LARCENY/THEFT:* As the first subfigure shows, crime occurences in the *LARCENY/THEFT* category follow a clear upwards trend over the years. In the first reported year, 2003, 'only' 25000 incidents were reported, while in the last year, 2017, the number of crimes almost reached 50000 in the year.
+* *VEHICLE THEFT:* Vehicle theft was a quite common commited crime until 2006, when the number of crimes significantly dropped and remained under 9000 after that.
+* *PROSTITUTION:* Prostitution rates was the highest in 2002, then decreased by 1000 cases in 2003. Unfortunately, it increased again in 2007, but gradually decreased by until 2015, when it has the lowest point with ~400 incidents in that year.
+
+We could see from the previous analyzations that there are some year that were exceptional in terms of crime occurences. Therefore, next we investigate outliers across all crimes, not restricted to specific categories (but still within focus crime categories). The way we do that is calculating the outliers first with [window rolling calculations](https://towardsdatascience.com/dont-miss-out-on-rolling-window-functions-in-pandas-850b817131db) and finding months that fall outside of the boundaries. Then, we calculate the outliers again, but this time with the [IsolationForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html) algorithm and lastly we compare the 2 sets of months and investigate those specific dates that were found by both methods.
+
+<figure>
+  <img src="./images/outliers_rolling_crime.png" alt="fig1" class="centeredImage" style="width:100%">
+</figure>
+
+> Figure 17: Outliers in 24 months rolling window averages of crime occurences
+
+Firstly, the boundaries are defined for a 24 months rolling window and with the help of this window's standard deviations, the lower theshold (by extracting the std from the mean) and upper threshold (by adding the std to the mean) are defined. The outliers are incidated with red dots on the plot and we can see that in the years of 2005, 2007, 2009 and 2013 exceptionally large amount of crimes happened compared to the average. There are other outliers as well, but they are not that significant. There are **30 outliers** in total out of the 180 total data points.
+
+But to make sure we filter the real outliers, we use a different method as well, to calculate the outliers: the IsolationForest algorithm. Sklearn's [IsolationForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html) returns the anomaly score of each sample using the IsolationForest algorithm.
+We calculate the outliers with another method as well and check the ones that were found by both methods.
+
+<figure>
+  <img src="./images/outliers_iforest_crime.png" alt="fig1" class="centeredImage" style="width:100%">
+</figure>
+
+> Figure 18: Outliers of averages of crime occurences using the IsolationForest algorithm
+
+The algorithm found 30 anomalies, but interestingly, these dates are different from the other 30 outliers found by the rolling method. Let's see the outlier months that were found by both methods:
+
+```
+Outliers that both methods found:
+Month: Feb, 2007 Count: 5582
+Month: Feb, 2009 Count: 5632
+Month: Jun, 2009 Count: 5652
+Month: Feb, 2010 Count: 5339
+Month: Feb, 2011 Count: 5208
+Month: Oct, 2012 Count: 7502
+Month: Sep, 2013 Count: 7843
+Month: Mar, 2015 Count: 7827
+Month: May, 2015 Count: 7897
+Month: Oct, 2016 Count: 7873
+Month: Mar, 2017 Count: 7972
+Month: Jul, 2017 Count: 8055
+Month: Oct, 2017 Count: 8340
+```
+
+12 months were found by both methods out of the 30 in total. There's no trend in the season when the peaks happened, there are cases in spring, summer, autumn and winter as well. Interestingly, 2017 is the year with the most peaks, which is consistent with the fact that that's the year with the most number of crimes. We can also notice that the number of crimes in the peak gradually increases as we're moving forward in time. That means that we need more and more crimes to fall outside of the defined threshold.
+
+**Crimes per area**
+
+Lastly, we analyse the location and distribution of the crimes in the city by visualizing them in Police Districts and calculating their density in 100mx100m squares of the city.
+
+A way to examine the crime rate in San Francisco is to visualize their distribution across the Police Districts. The following interactive map shows the number of reported crimes in each police district.
+
+<iframe src="./maps/crime_count_district.html" width="100%" height="500px"></iframe>
+
+> Figure 19: Interactive maps of the number of crimes in each Police District
+
+As the interactive map shows above, most of the crimes happened in the *SOUTHERN* district, with the exact number of 221.491k occurences. As we move towards the outside of the city, the less is the crime rate, for example in *RICHMOND* the number of crimes were only 65.28k. We can conclude here that most of the crimes happen in the inner city of San Francisco.
+
+To look for further patterns we can calculate the crime density for each sqaure in San Francisco.
 
 <figure>
   <img src="./images/crime_density_100x100.png" alt="fig1" class="centeredImage" style="width:80%">
 </figure>
 
-- Here we can see the density of interactions in 100x100m blocks around SF, we cannot see much from this picture so let's make the resolution finer and have another look.
+> Figure 20: Number of crimes in the 100mx100m sqaures of San Francisco
 
-<figure>
-  <img src="./images/crime_density_50x50.png" alt="fig1" class="centeredImage" style="width:80%">
-</figure>
-- Now we can see more detail, we can also see that there is a large cluster that is encompassed by all the central sectors and Southern simply encompasses most of it.
+The figure illustrates the density of crimes in 100mx100m squares, the ligher the color, the higher the crime density in that area. 
 
-Let's then take a look at the distribution of the groups(Violent, non violent and non criminal)
-- Violent
-	- As we expect, when taking a look at the violent crimes we can see that they follow the distribution of the overall dataset quite closely with the major change being that the suburbs aren't as bright while the centeral area is even brighter.
-	
-	
-	
-<figure>
-  <img src="./images/violent_density_100x100.png" alt="fig1" class="centeredImage" style="width:80%">
-</figure>
+As we have previously seen, the most dense area is still the inner city area of San Francisco (Southern district). Otherwise the crimes are quite scattered, because the squares are shown with nearly black color outside of the inner city. Although we haven't found new patterns with this illstration, we can support the fact that most of the crimes happen in the area of the inner city.
 
-
-- Next taking a look at non violent crimes
-	- Again we can see a cluster in the downtown are but the overall graph is far darker than the previous one, so while overall there are far fewer non violent crimes in the wider SF area, the central districts maintain a high number.
-
-<figure>
-  <img src="./images/nonViolent_density_100x100.png" alt="fig1" class="centeredImage" style="width:80%">
-</figure>
-
-- Finally the non crimes
-	- Surprisingly this plot tracks the non violent one very closely. We would not be surprised if these last 2 graphs track the overall population distribution of people in SF with economic factors pushing the people who live in the downtown area to more violent activities.
- <figure>
-  <img src="./images/nonCrime_density_100x100.png" alt="fig1" class="centeredImage" style="width:80%">
-</figure>
-
+After thoroughly analyzing both datasets, it's time to move forward and look for the connection between tree density and crime rate in San Francisco.
 
 ## Analysing the correlation between tree density and crime occurences
 During the analysis, we expect to get the same results as we have read in the papers written about the connection between trees and crime rate in an area. We expect to find results that can support the hypothesis, according to which, the more trees are planted the less crime incidents happen in a city. To find out, we calculate the correlation between tree density and crimes by investigating specific areas using linear regression.
