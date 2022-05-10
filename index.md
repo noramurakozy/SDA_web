@@ -393,6 +393,7 @@ The following table and maps show the location of these crimes across San Franci
 > Table 3: The occurences of the most common crime categories in San Francisco and their location on interactive maps
 
 **Crimes over the years**
+
 In this section we analyse the crime rate development in the city, we're interested in any peaks and valleys in the investigated time period.
 
 The figure shows the number of crimes in each year in San Francisco. Most of the crimes happened in 2017 with around 90000 incidents. In 2011 only ~70000 crimes happened, which is the lowest amount in the registered time period.
