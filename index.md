@@ -1,23 +1,34 @@
 This webpage was created as an assignment for the [Social Data Analysis and Visualisation](https://kurser.dtu.dk/course/02806) course at DTU in 2022. The site presents our findings on the connection between tree density and crime occurences in San Francisco. Please find the repository of this GitHub page **[here](https://github.com/noramurakozy/SDA_web/tree/gh-pages)**.
 
-TODO: regenerate TOC when we're done
-TODO: add link to github repo, data, notebook in one place for easy access
-
 ## Table of contents
+- [Useful links](#useful-links)
 - [Introduction](#introduction)
   * [Motivation](#motivation)
   * [Datasets](#datasets)
     + [Tree dataset](#tree-dataset)
       - [Overview of data](#overview-of-data)
-      - [Fundamental aspects of the data](#fundamental-aspects-of-the-data)
+      - [Exploratory analysis](#exploratory-analysis)
     + [Crime dataset](#crime-dataset)
       - [Overview of data](#overview-of-data-1)
-      - [Fundamental aspects of the data](#fundamental-aspects-of-the-data-1)
+      - [Exploratory analysis](#exploratory-analysis-1)
 - [Analysing the correlation between tree density and crime occurences](#analysing-the-correlation-between-tree-density-and-crime-occurences)
-- [Conclusion](#conclusion)
-- [References](#references)
+  * [Correlation per area](#correlation-per-area)
+  * [Correlation in time](#correlation-in-time)
+  * [Linear regression](#linear-regression)
+    + [Nr. of crimes vs nr. of trees planted in a month](#nr-of-crimes-vs-nr-of-trees-planted-in-a-month)
+    + [Nr. of crimes in a Police District vs nr. of trees planted](#nr-of-crimes-in-a-police-district-vs-nr-of-trees-planted)
+- [Discussion and conclusion](#discussion-and-conclusion)
+
+## Useful links
+
+[Explainer notebook](https://github.com/noramurakozy/social-data-final/blob/main/ProjectB.ipynb)
+[Tree data](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)
+[Crime data](https://data.sfgov.org/api/views/tmnf-yvry/rows.csv?accessType=DOWNLOAD)
+[Final project GitHub repo](https://github.com/noramurakozy/social-data-final)
+[Website GitHub repo](https://github.com/noramurakozy/SDA_web/tree/gh-pages)
 
 ## Introduction
+
 This section introduces our motivation behind choosing this topic the describes the 2 datasets we're using in detail.
 
 ### Motivation
@@ -40,7 +51,7 @@ and many more.
 
 In the social benefits category, we can see that the presence of trees can lower the criminal activity in an area. This fact was one of the inspirations of the proposed [urban forest plan](https://sfplanning.org/urban-forest-plan) in San Francisco. They list 'reduced crime rate' as one of the benefits of planting trees along the streets in the city. Two papers are also cited on the page to prove that trees really can have an influence on crime rate in a city [[1]](https://www.sciencedirect.com/science/article/abs/pii/S0169204612000977#:~:text=The%20more%20conservative%20spatially%20adjusted,roughly%2012%25%20decrease%20in%20crime.) [[2]](https://journals.sagepub.com/doi/abs/10.1177/0013916501333002#:~:text=Although%20vegetation%20has%20been%20positively,and%20less%20aggressive%20and%20violent). These studies were made based on data collected in other cities in the USA, but if planting trees worked in different settings, why not to try in San Francisco as well? Since, we haven't found any resource on the correlation between tree coverage and crime rate in San Francisco, we decided to investigate this topic and find out if it's worth planting more trees in order to turn San Francisco into a more peaceful city.
 
-This website guides the reader through the process of investigating the street tree and crime dataset of San Francisco and gives insights into the connection between density of trees in specific areas and the evolution of crimes in the same areas. The website serves as the main information source and tells the story of our project by including pictures, interactive maps and our observations for each small topic we investigated. The code and calculations can be found here if the reader wants to have a deeper look: **TODO link to the notebook**.
+This website guides the reader through the process of investigating the street tree and crime dataset of San Francisco and gives insights into the connection between density of trees in specific areas and the evolution of crimes in the same areas. The website serves as the main information source and tells the story of our project by including pictures, interactive maps and our observations for each small topic we investigated. The code and calculations can be found here if the reader wants to have a deeper look: https://github.com/noramurakozy/social-data-final/blob/main/ProjectB.ipynb.
 
 ### Datasets
 This section describes the 2 datasets we were working with, starting with the street tree dataset in San Francisco. We provide the same statistics and insights to the datasets, so the reader can easily make a connectiong between the 2 datasets. Further analysis between the two can be found in [Section 2](#analysing-the-correlation-between-tree-density-and-crime-occurences).
