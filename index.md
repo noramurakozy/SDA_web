@@ -526,14 +526,32 @@ We also calculate the correlation coefficient, which is `0.1341`. The correlatio
     - make observations
     - support observations with calculations and data
 
-### Linear regression - Feri
-TODO: why we do this
-#### Nr. of crimes in a month based on nr. of trees planted - Feri
-- prediction of number of crimes in a month if X number of trees are planted
-    - linear regression
-#### Nr. of crimes in a Police District based on nr. of trees planted - Feri
-- prediction of number of crimes in a district if X number of trees are planted
-    - linear regression
+### Linear regression
+Here we analyse and look for further patterns using linear regression to find the connection between crime rate and tree density per month and per police district. We also plot the results of the linear regression so the reader gets an instant insight into the correlations.
+
+#### Nr. of crimes vs nr. of trees planted in a month
+First we examine if there's any connection between the number of trees planted in a month and the number of reported crimes per category. The axes of all subfigures on the next figure specifies the number of trees planted/number of crimes committed in a specific month e.g.: number of crimes committed and the number of trees planted in April 2010. 
+
+<figure>
+  <img src="./images/lin_reg_monthly.png" alt="fig1" class="centeredImage" style="width:80%">
+</figure>
+
+> Figure 22: Correlation of tree density and crime rate per crime category vs tree count in a month
+
+In most cases we can hardly say there is linear connection between the two parameters. The previusly calculated correlation confirms this observation. Suprisingly the slope of the linear functions are negative on most of the figures which argues the correlation value. Negative slope means larger number of crimes corresponds to less trees planted in a month which is the same pattern the cited articles have discovered.
+
+#### Nr. of crimes in a Police District vs nr. of trees planted
+Next, we look at the correlation between number of crimes and trees planted in Police Districts. The axes of all subfigures on the next figure specifies the number of trees planted/number of crimes committed in a specific month in certain police districte.g.: number of crimes committed and the number of trees planted in April 2010 in Tenderloin. 
+
+<figure>
+  <img src="./images/lin_reg_pdDistrict.png" alt="fig1" class="centeredImage" style="width:80%">
+</figure>
+
+> Figure 23: Correlation of tree density and crime rate per crime category vs tree count in a month
+
+On most figures it would seem that the linear fit describes the connection between the two parameters but if we take a closer look we can see that the number of trees equal to zero which means we are lacking of data where the police district is specified regarding the filtered tree dataset.
+
+TODO: continue
 
 ## Discussion and conclusion
 Overall, we did a throrough analysis on both datasets to get familiar with them and have insightful visulalization that helps to understand the data for the user as well. We also tried to produc as many interactive visualisations as possible, so the user can explore the data in more detail while experiencing a better UX, and not only looking at images.
