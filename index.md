@@ -507,13 +507,19 @@ After thoroughly analyzing both datasets, it's time to move forward and look for
 ## Analysing the correlation between tree density and crime occurences
 During the analysis, we expect to get the same results as we have read in the papers written about the connection between trees and crime rate in an area. We expect to find results that can support the hypothesis, according to which, the more trees are planted the less crime incidents happen in a city. To find out, we calculate the correlation between tree density and crimes by investigating specific areas using linear regression.
 
-### Correlation per area - Feri
-TODO: why we do this
-#### The city as a whole - Feri
-- connection between number of trees and number of crimes in general? (in 100mx100x areas on heatmap)
-    - plot: correlation heatmap
-    - calculate correlation
-    - draw conclusion
+### Correlation per area
+Here we calculate the correlation between the tree density in a 100m\*100m area and the number of crimes that are committed in the same area. We are using [Pearson correlation](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient) since this is the default behaviour of numpy's [corrcoeff function](https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html). This will give us insights on area specific correlation and patterns.
+
+<figure>
+  <img src="./images/correlation_100x100.png" alt="fig1" class="centeredImage" style="width:80%">
+</figure>
+
+> Figure 21: Correlation of tree density and crime rate per 100m x 100m squares
+
+We can see that some of the main streets of the city has high correlation between the trees and crimes. E.g. the middle part of San Jose Avenue has squares with relatively high correlation (more than 0.8), but we can't tell the same for the west coast of the city, where most of the sqaures has a correlation near to 0.
+
+We also calculate the correlation coefficient, which is `0.1341`. The correlation is positive, however it is too small to prove the link the crime rate to the number of trees. Positive correlation means that the increasing number of trees in an area indicates higher crime rate. It contradicts the articles that we have found and meantioned in the Introduction, or at least the pattern cannot be identified using these two dataset.
+
 ### Correlation in time - Feri
 - is there a drop in crimes as trees are planted over time?
     - animation of planting trees over the year + crimes in the same animation with different color?
@@ -529,7 +535,11 @@ TODO: why we do this
 - prediction of number of crimes in a district if X number of trees are planted
     - linear regression
 
-## Conclusion - Nora
-- write conclusion of findings
-- what could have we done better
-- mention any areas with missing data (e.g. the park where no trees are listed in the dataset (because those are not street trees?))
+## Discussion and conclusion
+Overall, we did a throrough analysis on both datasets to get familiar with them and have insightful visulalization that helps to understand the data for the user as well. We also tried to produc as many interactive visualisations as possible, so the user can explore the data in more detail while experiencing a better UX, and not only looking at images.
+
+Although, since there is no data about trees in the parks (because they are not street trees and probably are maintained by another organization than the author of our dataset), we do not have information about crimes happening in parks and their correlation with the tree density. It might have chenged the results a bit, but probably not significantly. It's quite surprising as well, that our results show that the more trees are planted in an area, the more crimes occured there. It's important to mention that the correlation was positive, but really low. So we can say that the more trees are planted the more crimes happen in an area, but since the correlation is really low, it's not enough to prove a clear link between trees and crimes. Which is not the result we would expect at first, also because of our inspiration project, the [Urban Forest Plan](https://sfplanning.org/urban-forest-plan) in San Francisco, where they mentioned lower crime rate as a possible benefit of planting trees. On their site, they cited 2 papers that investigated this topic in 2 other cities in the US, but it seems like planting trees did not help in the case of San Francisco, which is an interesting conclusion in the end, since that's not what a person would expect.
+
+An explanation could be that criminals can hide better in areas where trees are densly planted or they just simply don't care about their surroundings and will commit the crime anyways.
+
+To summarize, it was an interesting topic to analyse and investigate, and we enjoyed the process, despite the surprising results. It seems like the government in San Francisco has to look for other solutions to lower crime rate in the city.
