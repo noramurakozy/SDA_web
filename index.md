@@ -516,7 +516,7 @@ Here we calculate the correlation between the tree density in a 100m\*100m area 
 
 > Figure 21: Correlation of tree density and crime rate per 100m x 100m squares
 
-We can see that some of the main streets of the city has high correlation between the trees and crimes. E.g. the middle part of San Jose Avenue has squares with relatively high correlation (more than 0.8), but we can't tell the same for the west coast of the city, where most of the sqaures has a correlation near to 0.
+We can see that some of the main streets of the city has high correlation between the trees and crimes. E.g. the middle part of San Jose Avenue has squares with relatively high correlation (more than 0.8), but we can't tell the same for the west coast of the city, where most of the sqaures has a correlation near to 0. The lighter the color, the higher the correlation.
 
 We also calculate the correlation coefficient, which is `0.1341`. The correlation is positive, however it is too small to prove the link the crime rate to the number of trees. Positive correlation means that the increasing number of trees in an area indicates higher crime rate. It contradicts the articles that we have found and meantioned in the Introduction, or at least the pattern cannot be identified using these two dataset.
 
