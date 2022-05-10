@@ -1,6 +1,7 @@
 This webpage was created as an assignment for the [Social Data Analysis and Visualisation](https://kurser.dtu.dk/course/02806) course at DTU in 2022. The site presents our findings on the connection between tree density and crime occurences in San Francisco. Please find the repository of this GitHub page **[here](https://github.com/noramurakozy/SDA_web/tree/gh-pages)**.
 
 TODO: regenerate TOC when we're done
+TODO: add link to github repo, data, notebook in one place for easy access
 
 ## Table of contents
 - [Introduction](#introduction)
@@ -40,13 +41,6 @@ and many more.
 In the social benefits category, we can see that the presence of trees can lower the criminal activity in an area. This fact was one of the inspirations of the proposed [urban forest plan](https://sfplanning.org/urban-forest-plan) in San Francisco. They list 'reduced crime rate' as one of the benefits of planting trees along the streets in the city. Two papers are also cited on the page to prove that trees really can have an influence on crime rate in a city [[1]](https://www.sciencedirect.com/science/article/abs/pii/S0169204612000977#:~:text=The%20more%20conservative%20spatially%20adjusted,roughly%2012%25%20decrease%20in%20crime.) [[2]](https://journals.sagepub.com/doi/abs/10.1177/0013916501333002#:~:text=Although%20vegetation%20has%20been%20positively,and%20less%20aggressive%20and%20violent). These studies were made based on data collected in other cities in the USA, but if planting trees worked in different settings, why not to try in San Francisco as well? Since, we haven't found any resource on the correlation between tree coverage and crime rate in San Francisco, we decided to investigate this topic and find out if it's worth planting more trees in order to turn San Francisco into a more peaceful city.
 
 This website guides the reader through the process of investigating the street tree and crime dataset of San Francisco and gives insights into the connection between density of trees in specific areas and the evolution of crimes in the same areas. The website serves as the main information source and tells the story of our project by including pictures, interactive maps and our observations for each small topic we investigated. The code and calculations can be found here if the reader wants to have a deeper look: **TODO link to the notebook**.
-
-TODO: delete when we're ready with the proofreading
-
-PLOTS HOWTO:
-  - short introduction why do we show this plot
-  - title, axes, colors, labels, ticks, caption
-  - observations written under the plot
 
 ### Datasets
 This section describes the 2 datasets we were working with, starting with the street tree dataset in San Francisco. We provide the same statistics and insights to the datasets, so the reader can easily make a connectiong between the 2 datasets. Further analysis between the two can be found in [Section 2](#analysing-the-correlation-between-tree-density-and-crime-occurences).
@@ -520,11 +514,10 @@ We can see that some of the main streets of the city has high correlation betwee
 
 We also calculate the correlation coefficient, which is `0.1341`. The correlation is positive, however it is too small to prove the link the crime rate to the number of trees. Positive correlation means that the increasing number of trees in an area indicates higher crime rate. It contradicts the articles that we have found and meantioned in the Introduction, or at least the pattern cannot be identified using these two dataset.
 
-### Correlation in time - Feri
-- is there a drop in crimes as trees are planted over time?
-    - animation of planting trees over the year + crimes in the same animation with different color?
-    - make observations
-    - support observations with calculations and data
+### Correlation in time
+We inspect the correlation between the number of trees in San Francisco in a specific month and the number of crimes committed in that certain month. This means that the we are interested if the growing number of trees decreases the number of crimes commited over time.
+According to our calculations the correlation between the number of trees in SF per month and the number of crimes commited per month is `0.1163`.
+This is a similar behaviour that we have experienced in the previous parts. The small correlation indicates that the growing number of trees in San Francisco has a minor affect on the crimes committed in the city.
 
 ### Linear regression
 Here we analyse and look for further patterns using linear regression to find the connection between crime rate and tree density per month and per police district. We also plot the results of the linear regression so the reader gets an instant insight into the correlations.
@@ -551,7 +544,7 @@ Next, we look at the correlation between number of crimes and trees planted in P
 
 On most figures it would seem that the linear fit describes the connection between the two parameters but if we take a closer look we can see that the number of trees equal to zero which means we are lacking of data where the police district is specified regarding the filtered tree dataset.
 
-TODO: continue
+There are 230 records in the filtered tree dataset where the number of planted trees in a month in a certain police district is zero. It is more than 12% of the whole dataset. In addition, there are 1123 records where the planted trees' number is less than 10 in a month in a police district. It seems that the police district is usually not recorded in the tree dataset which is the root cause for the results above.
 
 ## Discussion and conclusion
 Overall, we did a throrough analysis on both datasets to get familiar with them and have insightful visulalization that helps to understand the data for the user as well. We also tried to produc as many interactive visualisations as possible, so the user can explore the data in more detail while experiencing a better UX, and not only looking at images.
