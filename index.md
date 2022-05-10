@@ -21,11 +21,11 @@ This webpage was created as an assignment for the [Social Data Analysis and Visu
 
 ## Useful links
 
-[Explainer notebook](https://github.com/noramurakozy/social-data-final/blob/main/ProjectB.ipynb)
-[Tree data](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)
-[Crime data](https://data.sfgov.org/api/views/tmnf-yvry/rows.csv?accessType=DOWNLOAD)
-[Final project GitHub repo](https://github.com/noramurakozy/social-data-final)
-[Website GitHub repo](https://github.com/noramurakozy/SDA_web/tree/gh-pages)
+- [Explainer notebook](https://github.com/noramurakozy/social-data-final/blob/main/ProjectB.ipynb)
+- [Tree data](https://data.sfgov.org/City-Infrastructure/Street-Tree-List/tkzw-k3nq)
+- [Crime data](https://data.sfgov.org/api/views/tmnf-yvry/rows.csv?accessType=DOWNLOAD)
+- [Final project GitHub repo](https://github.com/noramurakozy/social-data-final)
+- [Website GitHub repo](https://github.com/noramurakozy/SDA_web/tree/gh-pages)
 
 ## Introduction
 
